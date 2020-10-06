@@ -1,4 +1,4 @@
-# WISE UofT 2019-2020 Website
+# WISE UofT 2020-2021 Website
 
 https://wiseuoft.org
 
