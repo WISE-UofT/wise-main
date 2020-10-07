@@ -1,2 +1,5 @@
 User-agent: Googlebot-Image
 Disallow: /img/team/
+
+User-agent: *
+Disallow: /our-team.html
