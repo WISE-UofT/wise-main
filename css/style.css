@@ -957,12 +957,22 @@ h6 {
     transition: height 0.4s;
 }
 
+#team .member .member-info-content-long {
+    transition: margin 0.2s;
+    height: 70px;
+    transition: height 0.4s;
+}
+
 #team .member:hover .member-info {
     transition: 0.4s;
 }
 
 #team .member:hover .member-info-content {
     height: 100px;
+}
+
+#team .member:hover .member-info-content-long {
+    height: 110px;
 }
 
 #team .member h4 {
