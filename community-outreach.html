@@ -136,6 +136,22 @@
 			<p>You may complete the form through this link to access the registration link for the event: <a href="https://campscui.active.com/orgs/EngineeringOutreachUniversityofToronto?season=3399641">Click Here!</a> </p>                   
                 </div>
 
+		<script>
+                    var coll = document.getElementsByClassName("collapsible");
+                    var i;
+                    for (i = 0; i < coll.length; i++) {
+                      coll[i].addEventListener("click", function() {
+                        this.classList.toggle("active");
+                        var content = this.nextElementSibling;
+                        if (content.style.maxHeight){
+                          content.style.maxHeight = null;
+                        } else {
+                          content.style.maxHeight = content.scrollHeight + "px";
+                        } 
+                      });
+                    }
+                    </script>
+
                 <div class="section-header">
                     <h4>Main Contact</h4>
                 </div>
