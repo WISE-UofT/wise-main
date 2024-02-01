@@ -101,15 +101,11 @@
             <div class="container">
                 
                 <div class="section-header">
-                    <h3>Our 2024 National Conference</h3>
-                </div>
-                
-                <div class="section-header">
-                    <h3>We held our twelfth annual conference on January 20th and 21st, 2024! Thank you to everyone who joined us.</h3>
+                    <h4>We held our twelfth annual conference on January 20th and 21st, 2024! Thank you to everyone who joined us.</h4>
                 </div>
 
                 <div class="container">
-                    <div class="row d-flex align-items-stretch">
+                    <div class="row" id="photo-row">
                         <div class="col-lg-3 col-md-3 text-center mb-4">
                             <img src="img/wiseconference2024/execteamphoto.png" class="img-fluid" alt="Photo exec" style="object-fit: cover;">
                         </div>
@@ -140,6 +136,32 @@
                         <!-- Add more photo columns as needed -->
                     </div>
                 </div>
+
+                <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                <script>
+                    $(document).ready(function () {
+                        adjustPhotoRow();
+                    });
+
+                    $(window).resize(function () {
+                        adjustPhotoRow();
+                    });
+
+                    function adjustPhotoRow() {
+                        var maxHeight = 0;
+
+                        // Loop through each column in the row to find the maximum height
+                        $("#photo-row .col-md-3").each(function () {
+                            var currentHeight = $(this).height();
+                            if (currentHeight > maxHeight) {
+                                maxHeight = currentHeight;
+                            }
+                        });
+
+                        // Set the height of each column to the maximum height
+                        $("#photo-row .col-md-3").height(maxHeight);
+                    }
+                </script>
 
                 <div class="section-header">
                     <h4>Main Contact</h4>
