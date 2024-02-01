@@ -110,7 +110,7 @@
                 <div class="container">
                     <div class="row" id="photo-row">
                         <div class="col-lg-3 col-md-3 text-center mb-4">
-                            <img src="img/wiseconference2024/execteamphoto.png" class="img-fluid" alt="Photo exec" style="object-fit: cover;">
+                            <img src="img/wiseconference2024/execteamphoto.jpg" class="img-fluid" alt="Photo exec" style="object-fit: cover;">
                         </div>
                         <div class="col-lg-3 col-md-3 text-center mb-4">
                             <img src="img/wiseconference2024/img1.png" class="img-fluid" alt="Photo 1" style="object-fit: cover;">
@@ -142,29 +142,33 @@
 
                 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
                 <script>
-                    $(document).ready(function () {
+                    $(window).on('load', function () {
                         adjustPhotoRow();
                     });
-
+                
                     $(window).resize(function () {
                         adjustPhotoRow();
                     });
-
+                
                     function adjustPhotoRow() {
+                        // Reset the height of all columns to auto before calculating the new height
+                        $("#photo-row .col-md-3").css("height", "auto");
+                
                         var maxHeight = 0;
-
+                
                         // Loop through each column in the row to find the maximum height
-                        $("#photo-row .col-md-3").each(function () {
+                        $("#photo-row .col-md-3 img").each(function () {
                             var currentHeight = $(this).height();
                             if (currentHeight > maxHeight) {
                                 maxHeight = currentHeight;
                             }
                         });
-
+                
                         // Set the height of each column to the maximum height
                         $("#photo-row .col-md-3").height(maxHeight);
                     }
                 </script>
+                
 
                 <div class="section-header">
                     <h4>Main Contact</h4>
