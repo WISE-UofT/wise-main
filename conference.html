@@ -41,6 +41,7 @@
 
         gtag('config', 'UA-122092113-1');
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -107,6 +108,40 @@
                     <h3>We held our twelfth annual conference on January 20th and 21st, 2024! Thank you to everyone who joined us.</h3>
                 </div>
 
+
+                <div class="container" id="photo-container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 text-center mb-4">
+                            <img src="img/wiseconference2024/execteamphoto.jpg" class="img-fluid" alt="Photo exec" style="object-fit: cover;">
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center mb-4">
+                            <img src="img/wiseconference2024/img1.png" class="img-fluid" alt="Photo 1" style="object-fit: cover;">
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center mb-4">
+                            <img src="img/wiseconference2024/img2.png" class="img-fluid" alt="Photo 2" style="object-fit: cover;">
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center mb-4">
+                            <img src="img/wiseconference2024/img3.JPG" class="img-fluid" alt="Photo 3" style="object-fit: cover;">
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center mb-4">
+                            <img src="img/wiseconference2024/img4.JPG" class="img-fluid" alt="Photo 4" style="object-fit: cover;">
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center mb-4">
+                            <img src="img/wiseconference2024/img5.JPG" class="img-fluid" alt="Photo 5" style="object-fit: cover;">
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center mb-4">
+                            <img src="img/wiseconference2024/img6.JPG" class="img-fluid" alt="Photo 6" style="object-fit: cover;">
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center mb-4">
+                            <img src="img/wiseconference2024/img7.jpg" class="img-fluid" alt="Photo 7" style="object-fit: cover;">
+                        </div>
+                        <div class="col-lg-3 col-md-3 text-center mb-4">
+                            <img src="img/wiseconference2024/img8.JPG" class="img-fluid" alt="Photo 8" style="object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                
                 <div class="container">
                     <div class="row" id="photo-row">
                         <div class="col-lg-3 col-md-3 text-center mb-4">
@@ -143,31 +178,16 @@
                 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
                 <script>
                     $(window).on('load', function () {
-                        adjustPhotoRow();
-                    });
-                
-                    $(window).resize(function () {
-                        adjustPhotoRow();
-                    });
-                
-                    function adjustPhotoRow() {
-                        // Reset the height of all columns to auto before calculating the new height
-                        $("#photo-row .col-md-3").css("height", "auto");
-                
-                        var maxHeight = 0;
-                
-                        // Loop through each column in the row to find the maximum height
-                        $("#photo-row .col-md-3 img").each(function () {
-                            var currentHeight = $(this).height();
-                            if (currentHeight > maxHeight) {
-                                maxHeight = currentHeight;
-                            }
+                        // Initialize Masonry after all images have loaded
+                        var $photoContainer = $('#photo-container');
+                        $photoContainer.masonry({
+                            itemSelector: '.col-md-3',
+                            columnWidth: '.col-md-3',
+                            percentPosition: true
                         });
-                
-                        // Set the height of each column to the maximum height
-                        $("#photo-row .col-md-3").height(maxHeight);
-                    }
+                    });
                 </script>
+                
                 
 
                 <div class="section-header">
