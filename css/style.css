@@ -107,6 +107,7 @@ h6 {
     padding: 0 0 10px 0;
     font-size: 20px;
     transition: all 0.5s;
+    background-color: rgba(255, 255, 255, 1);
 }
 
 #topbar .social-links {
@@ -210,14 +211,14 @@ h6 {
 }
 
 #intro .intro-info h2 {
-    color: #413e66;
+    color: #e6e8e5;
     margin-bottom: 40px;
     font-size: 48px;
     font-weight: 700;
 }
 
 #intro .intro-info h2 span {
-    color: #4a148c;
+    color: #90478f;
 }
 
 #intro .intro-info .btn-get-started,
