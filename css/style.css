@@ -140,6 +140,7 @@ h6 {
     right: 0;
     transition: all 0.5s;
     z-index: 997;
+    background-color: rgba(255,255,255,1);
 }
 
 #header.header-scrolled,
