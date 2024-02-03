@@ -107,7 +107,7 @@ h6 {
     padding: 0 0 10px 0;
     font-size: 20px;
     transition: all 0.5s;
-    background-color: rgb(255, 255, 255, 1);
+    background-color: #fff;
 }
 
 #topbar .social-links {
