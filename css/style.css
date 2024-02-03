@@ -86,6 +86,7 @@ h6 {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -97,6 +98,7 @@ h6 {
         -webkit-transform: rotate(0deg);
         transform: rotate(0deg);
     }
+
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -140,7 +142,7 @@ h6 {
     right: 0;
     transition: all 0.5s;
     z-index: 997;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255, 1);
 }
 
 #header.header-scrolled,
@@ -218,7 +220,7 @@ h6 {
 }
 
 #intro .intro-info h2 span {
-    color: #90478f;
+    color: #CBC3E3;
 }
 
 #intro .intro-info .btn-get-started,
@@ -1379,23 +1381,29 @@ h6 {
     #topbar {
         display: none;
     }
+
     #header {
         height: 70px;
         padding: 15px 0;
     }
+
     #header .logo h1 {
         font-size: 28px;
         padding: 8px 0;
     }
+
     #why-sponsor-WISE .why-sponsor-WISE-content {
         padding-top: 30px;
     }
+
     #our-events {
         padding-bottom: 30px;
     }
+
     #our-events .card {
         margin-bottom: 50px;
     }
+
     #about-this-event {
         padding-bottom: 30px;
     }
@@ -1405,9 +1413,11 @@ h6 {
     .back-to-top {
         bottom: 15px;
     }
+
     #faq #faq-list a {
         font-size: 18px;
     }
+
     #faq #faq-list i {
         top: 13px;
     }
@@ -1418,6 +1428,7 @@ h6 {
         height: auto;
         padding: 80px 0 60px 0;
     }
+
     #intro {
         width: 100%;
         height: 100vh;
@@ -1425,20 +1436,25 @@ h6 {
         background: #f8f5fd url("../img/intro-xs.jpg") center top no-repeat;
         background-size: cover;
     }
+
     #intro .container {
         height: auto !important;
     }
+
     #intro .intro-img {
         width: 80%;
     }
+
     #intro .intro-info {
         text-align: center;
         padding-top: 20vh;
     }
+
     #intro .intro-info h2 {
         font-size: 34px;
         margin-bottom: 30px;
     }
+
     .section-header p {
         width: 100%;
     }
@@ -1461,138 +1477,145 @@ h6 {
     text-align: left;
     outline: none;
     font-size: 15px;
-  }
-  
-  .collapsible:active, .collapsible:hover {
+}
+
+.collapsible:active,
+.collapsible:hover {
     background-color: #555;
-  }
-  
-  .collapsible:after {
+}
+
+.collapsible:after {
     content: '\002B';
     color: white;
     font-weight: bold;
     float: right;
     margin-left: 5px;
-  }
-  
-  .active:after {
+}
+
+.active:after {
     content: "\2212";
-  }
-  
-  .content {
+}
+
+.content {
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
-  }
+}
 
 
 
-  /* Variables */
+/* Variables */
 /* Fonts */
 
 /* Styling */
 .timeline {
-  margin: 4em auto;
-  position: relative;
-  max-width: 46em;
+    margin: 4em auto;
+    position: relative;
+    max-width: 46em;
 }
+
 .timeline:before {
-  background-color: black;
-  content: '';
-  margin-left: -1px;
-  position: absolute;
-  top: 0;
-  left: 2em;
-  width: 2px;
-  height: 100%;
+    background-color: black;
+    content: '';
+    margin-left: -1px;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 2px;
+    height: 100%;
 }
 
 .timeline-event {
-  position: relative;
+    position: relative;
 }
+
 .timeline-event:hover .timeline-event-icon {
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-  background-color: #a83279;
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    background-color: #a83279;
 }
+
 .timeline-event:hover .timeline-event-thumbnail {
-  -moz-box-shadow: inset 40em 0 0 0 #a83279;
-  -webkit-box-shadow: inset 40em 0 0 0 #a83279;
-  box-shadow: inset 40em 0 0 0 #a83279;
+    -moz-box-shadow: inset 40em 0 0 0 #a83279;
+    -webkit-box-shadow: inset 40em 0 0 0 #a83279;
+    box-shadow: inset 40em 0 0 0 #a83279;
 }
 
 .timeline-event-copy {
-  padding: 2em;
-  position: relative;
-  top: -1.875em;
-  left: 4em;
-  width: 100%;
+    padding: 2em;
+    position: relative;
+    top: -1.875em;
+    left: 4em;
+    width: 100%;
 }
+
 .timeline-event-copy h3 {
-  font-size: 1.75em;
+    font-size: 1.75em;
 }
+
 .timeline-event-copy h4 {
-  font-size: 1.2em;
-  margin-bottom: 1.2em;
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
 }
+
 .timeline-event-copy strong {
-  font-weight: 700;
+    font-weight: 700;
 }
+
 .timeline-event-copy p:not(.timeline-event-thumbnail) {
-  padding-bottom: 1.2em;
+    padding-bottom: 1.2em;
 }
 
 .timeline-event-icon {
-  -moz-transition: -moz-transform 0.2s ease-in;
-  -o-transition: -o-transform 0.2s ease-in;
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: black;
-  outline: 10px solid white;
-  display: block;
-  margin: 0.5em 0.5em 0.5em -0.5em;
-  position: absolute;
-  top: 0;
-  left: 2em;
-  width: 1em;
-  height: 1em;
+    -moz-transition: -moz-transform 0.2s ease-in;
+    -o-transition: -o-transform 0.2s ease-in;
+    -webkit-transition: -webkit-transform 0.2s ease-in;
+    transition: transform 0.2s ease-in;
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: black;
+    outline: 10px solid white;
+    display: block;
+    margin: 0.5em 0.5em 0.5em -0.5em;
+    position: absolute;
+    top: 0;
+    left: 2em;
+    width: 1em;
+    height: 1em;
 }
 
 .timeline-event-thumbnail {
-  -moz-transition: box-shadow 0.5s ease-in 0.1s;
-  -o-transition: box-shadow 0.5s ease-in 0.1s;
-  -webkit-transition: box-shadow 0.5s ease-in;
-  -webkit-transition-delay: 0.1s;
-  transition: box-shadow 0.5s ease-in 0.1s;
-  color: white;
-  font-size: 0.75em;
-  background-color: black;
-  -moz-box-shadow: inset 0 0 0 0em #ef795a;
-  -webkit-box-shadow: inset 0 0 0 0em #ef795a;
-  box-shadow: inset 0 0 0 0em #ef795a;
-  display: inline-block;
-  margin-bottom: 1.2em;
-  padding: 0.25em 1em 0.2em 1em;
+    -moz-transition: box-shadow 0.5s ease-in 0.1s;
+    -o-transition: box-shadow 0.5s ease-in 0.1s;
+    -webkit-transition: box-shadow 0.5s ease-in;
+    -webkit-transition-delay: 0.1s;
+    transition: box-shadow 0.5s ease-in 0.1s;
+    color: white;
+    font-size: 0.75em;
+    background-color: black;
+    -moz-box-shadow: inset 0 0 0 0em #ef795a;
+    -webkit-box-shadow: inset 0 0 0 0em #ef795a;
+    box-shadow: inset 0 0 0 0em #ef795a;
+    display: inline-block;
+    margin-bottom: 1.2em;
+    padding: 0.25em 1em 0.2em 1em;
 }
 
 ul.timeline {
     list-style: none;
     /* padding: 0;
     margin: 0; */
-  }
-  
-  li.timeline-event {
-  }
-  
-  li.timeline-event::before {
-    color: white; /* or whatever color you prefer */
-  }
-  
+}
+
+li.timeline-event {}
+
+li.timeline-event::before {
+    color: white;
+    /* or whatever color you prefer */
+}
