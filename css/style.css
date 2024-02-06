@@ -214,13 +214,13 @@ h6 {
 
 #intro .intro-info {
     width: 50%;
-    margin-left: auto;
+    margin-left: 0;
     margin-right: 0;
 }
 
 #intro .intro-info h2 {
     color: #e6e8e5;
-    margin-right: 40px;
+    margin-right: 0;
     font-size: 48px;
     font-weight: 700;
     text-align: right;
