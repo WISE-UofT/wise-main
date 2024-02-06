@@ -210,6 +210,9 @@ h6 {
     position: relative;
     background: #f8f5fd url("../img/wiseconference2024/execteamphoto2.jpg") top no-repeat;
     background-size: cover;
+    right: 0;
+    left: auto;
+    margin-left: auto;
 }
 
 #intro .intro-info h2 {
