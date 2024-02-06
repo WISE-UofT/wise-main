@@ -210,12 +210,12 @@ h6 {
     position: relative;
     background: #f8f5fd url("../img/wiseconference2024/execteamphoto2.jpg") top no-repeat;
     background-size: cover;
-    display: flex;
-    justify-content: flex-end;
 }
 
 #intro .intro-info {
-    width: 50%; 
+    width: 50%;
+    margin-left: auto;
+    margin-right: 0;
 }
 
 #intro .intro-info h2 {
