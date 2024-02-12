@@ -223,7 +223,7 @@ h6 {
     margin-right: 0;
     font-size: 48px;
     font-weight: 700;
-    text-align: right;
+    /*text-align: right; */
 }
 
 #intro .intro-info h2 span {
