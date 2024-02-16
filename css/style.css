@@ -212,6 +212,15 @@ h6 {
     background-size: cover;
 }
 
+.intro-layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
 #intro .intro-info {
     width: 50%;
     margin-left: 0;
@@ -224,8 +233,6 @@ h6 {
     font-size: 36px;
     font-weight: 700;
     padding-right: 0px;
-    background: #ffffff;
-    opacity: .6;
     width: 245px;
 }
 
