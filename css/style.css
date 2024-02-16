@@ -219,15 +219,18 @@ h6 {
 }
 
 #intro .intro-info h2 {
-    color: #e6e8e5;
-    margin-right: 0;
+    color: #301941;
+    margin-right: 175px;
     font-size: 36px;
     font-weight: 700;
-    padding-right: 0; 
+    padding-right: 0px;
+    background: #ffffff;
+    opacity: .6;
+    width: 245px;
 }
 
 #intro .intro-info h2 span {
-    color: #CBC3E3;
+    color: #301934;
 }
 
 #intro .text-right {
