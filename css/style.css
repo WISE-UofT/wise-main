@@ -1489,7 +1489,7 @@ h6 {
 
 /* Collapsible for opportunities */
 .collapsible {
-    background-color: #777;
+    background-color: #6762a1;
     color: white;
     cursor: pointer;
     padding: 18px;
@@ -1502,7 +1502,7 @@ h6 {
 
 .collapsible:active,
 .collapsible:hover {
-    background-color: #555;
+    background-color: #413e66;
 }
 
 .collapsible:after {
