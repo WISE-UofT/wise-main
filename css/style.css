@@ -222,19 +222,29 @@ h6 {
 }
 
 #intro .intro-info {
-    width: 50%;
+    width: 180px;
     margin-left: 0;
     margin-right: 0;
 }
 
 #intro .intro-info h2 {
     color: #301941;
-    margin-right: 75%; 
+    margin-right: 175px;
     font-size: 36px;
     font-weight: 700;
     padding-right: 0px;
-    width: 93%;
+    width: 245px;
 }
+
+/* #intro .intro-info h2 {
+    color: #301941;
+    margin-right: 75%;  
+    font-size: 36px;
+    font-weight: 700;
+    padding-right: 0px;
+    width: 180px;
+    text-align: right;
+} */
 
 #intro .intro-info h2 span {
     color: #301934;
