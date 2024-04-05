@@ -231,10 +231,9 @@ h6 {
     color: #301941;
     font-size: 36px;
     font-weight: 700;
-    /*padding-right: 0px; */
-    margin: 0;
     padding: 0;
-    width: 100%; /* Adjusted to match the width of intro-layer */
+    width: 100%; 
+    text-align: right;
 }
 
 /* #intro .intro-info h2 {
@@ -1555,13 +1554,16 @@ h6 {
     }
 
     #intro .intro-info {
-        text-align: center;
+        text-align: right;
         padding-top: 20vh;
+        justify-content: center;
     }
 
     #intro .intro-info h2 {
-        font-size: 34px;
+        font-size: 36px;
         margin-bottom: 30px;
+        margin: 0; 
+        width: 100%;
     }
 
     .section-header p {
