@@ -1730,3 +1730,33 @@ li.timeline-event::before {
     color: white;
     /* or whatever color you prefer */
 }
+
+.info-banner 
+{
+    background-color: #eee5f9;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 17px;
+    color: #4a148c;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-banner p 
+{
+    margin: 0px
+}
+
+.info-banner i 
+{
+    color: #4a148c;
+    margin-right: 20px;
+}
+
+.info-banner .icon-size
+{
+    font-size: larger;
+}
