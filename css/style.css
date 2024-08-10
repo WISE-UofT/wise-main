@@ -225,6 +225,7 @@ h6 {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    padding-right: 10px;
 }
 
 #intro .intro-info h2 {
@@ -252,6 +253,7 @@ h6 {
 
 #intro .text-right {
     text-align: right;
+
 }
 
 #intro .intro-info .btn-get-started,
