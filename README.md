@@ -33,5 +33,5 @@ The VP of marketing can now see this PR in the original `wise-main` repo under t
 2. Create a new webpage (make a copy from the template.html file, or just link to EventBrite)
 3. Link to the event module
 
-#### For websites:
+#### Working on Websites?
 - Copy from template.html
