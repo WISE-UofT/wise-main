@@ -1758,5 +1758,6 @@ li.timeline-event::before {
 
 .info-banner .icon-size
 {
-    font-size: larger;
+    font-size: 25px;
+    padding-right: 10px;
 }
