@@ -1583,7 +1583,8 @@ h6 {
     background-color: #413e66;
 }
 
-.collapsible:after {
+/* the plus, minus sign */
+.collapsible:after { 
     content: '\002B';
     color: white;
     font-weight: bold;
@@ -1596,13 +1597,16 @@ h6 {
 }
 
 .content {
-    padding: 0 18px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
+   
 }
 
+.inner-content {
+    padding: 18px;  
+}
 
 
 /* Variables */
