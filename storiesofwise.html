@@ -42,11 +42,9 @@
     <style>
         /* Custom CSS for Medium embed */
         #retainable-rss-embed .rss-row {
-        background-color: #ffffff; /* Set the background color */
-        padding: 30px; /* Adjust padding as needed */
-        border-radius: 10px; /* Add rounded corners */
+        background-color: #ffffff; 
+        border-radius: 10px; 
         position: relative;
-        overflow: hidden;
         margin: 0 10px 40px 10px;
         box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
         transition: all 0.3s ease-in-out;
@@ -74,6 +72,26 @@
         color: #413e66;
         font-family: "Montserrat", sans-serif;
         font-weight: 700;
+        }
+
+        /* Copy of btn-current from style.css */
+        .btn-purple { 
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 500;
+            border-radius: 0;
+            padding: 10px 24px;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            display: inline-block;
+            background: #4a148c;
+            color: #fff;
+            margin: 10px;
+        }
+
+        .btn-purple:hover {
+            color: #fff;
+            background: #8e24aa;
         }
     </style>
   
@@ -146,8 +164,8 @@
                     data-maxcols="3"
                     data-layout="grid"
                     data-poststyle="inline"
-                    data-readmore="Read the rest"
-                    data-buttonclass="btn btn-primary"
+                    data-readmore="Read more"
+                    data-buttonclass="btn-purple"
                     data-offset="-100">
                 </div>
             </div>
