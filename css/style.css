@@ -1752,4 +1752,6 @@ li.timeline-event::before {
 {
     font-size: 25px;
     padding-right: 10px;
+    padding-top: 2px;
+    opacity: 0.7;
 }
