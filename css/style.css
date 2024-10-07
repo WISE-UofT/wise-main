@@ -1137,28 +1137,57 @@ h6 {
 
 #our-events .card .card-header {
     background-color: white;
-    border-bottom: 0px;
-    -moz-text-align-last: center;
-    text-align-last: center;
+    border-bottom: 15px;
+    -moz-text-align-last: left;
+    text-align-last: left;
+    padding-bottom: 5;
+    padding-left: 0;
+    padding-top: 0;
 }
 
 #our-events .card .card-title {
-    margin-bottom: 16px;
-    font-weight: 600;
-    color: #535074;
+    font-weight: 500;
+    color: #9892b6;
+    font-size: medium;
 }
 
 #our-events .card .card-block {
     padding-top: 0;
-    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
+}
+
+#our-events .card .image-container {
+    flex: 0 0 340px;   
+    padding-right: 40px;
+   
+}
+
+#our-events .card img {
+    border-radius: 10px;
+}
+
+#our-events .card .tags {
+    padding-top: 15px;
+}
+
+#our-events .card .tag {
+    display: inline-block;
+    background-color: #e3dce97e; 
+    color: #333; 
+    padding: 5px 10px; 
+    border-radius: 12px; 
+    margin-right: 5px; 
+    font-size: 0.7em;
 }
 
 #our-events .card p {
     border: 1px;
-    padding: 6px;
     color: #413e66;
     font-weight: 500;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 15px;
 }
 
 #our-events .card h3 {
