@@ -1174,7 +1174,17 @@ h6 {
 
 #our-events .card .tag {
     display: inline-block;
-    background-color: #e3dce97e; 
+    background-color: #8582a87d; 
+    color: #333; 
+    padding: 5px 10px; 
+    border-radius: 12px; 
+    margin-right: 5px; 
+    font-size: 0.7em;
+}
+
+#our-events .card .tag-highschool {
+    display: inline-block;
+    background-color: #bd79c971; 
     color: #333; 
     padding: 5px 10px; 
     border-radius: 12px; 
@@ -1245,6 +1255,20 @@ h6 {
     display: inline-block;
     background: #4a148c;
     color: #fff;
+}
+
+#our-events .card .btn-disabled {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 0;
+    padding: 10px 24px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    display: inline-block;
+    background: #8582a8;
+    color: #fff;
+    pointer-events: none;
 }
 
 #our-events .card .btn-current:hover {
