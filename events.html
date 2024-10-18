@@ -269,6 +269,7 @@
                                     <span class="tag">Technology</span>
                                     <span class="tag">Engineering</span>
                                     <span class="tag">University</span>
+                                    <span class="tag-highschool">High School</span>
                                 </div>
                             </div>
                             <!-- Image  -->
@@ -347,6 +348,27 @@
     <script src="js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tags = document.querySelectorAll(".tag, .tag-highschool");
+            const events = document.querySelectorAll(".row.flex-items-lg-middle.flex-items-lg-center");
+    
+            tags.forEach(tag => {
+                tag.addEventListener("click", () => {
+                    const selectedTag = tag.textContent.trim();
+    
+                    events.forEach(event => {
+                        const eventTags = Array.from(event.querySelectorAll(".tag, .tag-highschool")).map(t => t.textContent.trim());
+                        if (eventTags.includes(selectedTag)) {
+                            event.style.display = "flex"; 
+                        } else {
+                            event.style.display = "none";
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 </html>
