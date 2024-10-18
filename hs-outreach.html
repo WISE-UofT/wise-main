@@ -92,10 +92,6 @@
         
         <section id="about-this-initiative">
             <div class="container">
-                <div class="info-banner">
-                    <ion-icon name="information-circle-outline" class="icon-size"></ion-icon>
-                    <p> Please check back soon for more infomation on the 2024-2025 academic year! </p>
-                </div>
                 <div class="section-header">
                     <h3>High School Outreach</h3>
                 </div>
@@ -108,83 +104,70 @@
                         <p>The main focus of the high school outreach team is to encourage high school students to pursue careers in 
                             STEM fields (Science, Technology, Engineering, Math). Through engaging and informative presentations, we 
                             educate high school students across the GTA of the diverse opportunities in science and engineering.</p>
-                        <h4>Ambassadors</h4>
-                        <p>Our team is composed of enthusiastic Ambassadors from various disciplines in both engineering and science 
-                            fields that are excited to share their experiences with high school students. Presentations range from 
-                            classroom sized demonstrations to 170+ students with group activities and building challenges.</p>
-                    </div>
-                </div>
-
-                <div style= "margin: 0 space auto; text-align: center;padding-top: 60px;" >
-                    <a href = "https://docs.google.com/forms/d/e/1FAIpQLSfqWrHJcBT8HYXQJM1i89g_v7viPAJD0LN2zylT0G27fbeV3Q/viewform" id="apply-btn" style = "margin-bottom: 28px;">
-                    Apply to become an Outreach Ambassador for the 2023-2024 year!
-                    </a>
-                </div>
-
-                <div class="row feature-item mt-5 pt-5">
-                    <div class="col-lg-5 wow fadeInUp order-1 order-lg-2">
-                        <img src="img/initiatives/hso-2.jpg" class="img-fluid" alt="hso-2">
-                    </div>
-            
-                    <div class="about-content col-lg-7 wow fadeInUp pt-4 pt-lg-0 order-2 order-lg-1">
                         <h4>High School Conference</h4>
                         <p>This year, WISE will be hosting the annual High School Conference, bringing together high school students from 
                             Ontario with post-secondary students, industry guests, and those in academia. The day will consist of keynote 
                             speakers, workshop series, and more on the topics of innovative research, post-secondary education in the STEM 
                             fields, and personal career journeys.</p>
-                        <h4>High School Mentorship</h4>
-                        <p>The High School Mentorship program connects high school students with undergraduate and graduate student mentors 
-                            to help students with professional and personal development, while introducing them to new people, ideas, and 
-                            inspirations. Each year we have around 20 mentors and 20 mentees participating in events such as coffee 
-                            hangouts, design challenges, and resume workshops.</p>
                     </div>
                 </div>
-
-                <div style= "margin: 0 space auto; text-align: center; padding-top: 40px; padding-bottom: 60px;" >
-                    <a href = "https://forms.gle/6z96gapsPKamf5aM9" id="apply-btn" style = "margin-bottom: 28px;">
-		             Apply to become a Mentor!
-                    </a>
-                    <a href = "https://forms.gle/9MThnNTxXW7fukNy6" id="apply-btn" style = "margin-bottom: 28px; margin-left: 30px">
-                        Apply to become a Mentee!
-                       </a>
+                <div class="section-header">
+                    <h3>Upcoming Events</h3>
                 </div>
+        
+        <button type="button" style="margin-bottom:10px; margin-top:10px" class="collapsible">High School Mentorship Program (HSMP)</button>
+        <div class="content">
+            <div class="inner-content">
+                <!--<img src="img/marketing/PwC.png" width="100%" height="650"> -->
+                <p>The High School Mentorship program connects high school students with undergraduate and graduate student mentors 
+                    to help students with professional and personal development, while introducing them to new people, ideas, and 
+                    inspirations. Each year we have around 20 mentors and 20 mentees participating in events such as coffee 
+                    hangouts, design challenges, and resume workshops. 
+                    <p>
+                        Apply to become a 
+                        <a href="https://forms.gle/9MThnNTxXW7fukNy6" target="_blank">mentor</a> 
+                        or a 
+                        <a href="https://forms.gle/9MThnNTxXW7fukNy6" target="_blank">mentee</a> !
+                    </p> 
+            </div>
+        </div>
+        
+        <button type="button" style="margin-bottom:10px; margin-top:10px" class="collapsible">STEM Students for a Day</button>
+        <div class="content">
+            <div class="inner-content">
+                <!--<img src="img/marketing/PwC.png" width="100%" height="650"> -->
+                <p>This event gives high school students a unique opportunity to experience university
+                    life at the University of Toronto. This one-day event allows students to attend lectures, tour research labs, and engage with current
+                    university students and professionals in STEM fields.</p>              
+                <p>On October 11th, 2024 students will get a first-hand look at what it's like to study in the fields
+                    of science, technology, engineering, and math. The day will include guided tours, interactive sessions, and the
+                    chance to connect with university mentors who can offer insights into both academic and personal development.</p>   
+                <p><a href="https://lu.ma/k07c5men" target="_blank" class="btn-register">Register Here!</a></p>
+            </div>    
+        </div>
 
+		<script>
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight){
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                } 
+                });
+            }
+        </script>
                 <div class="section-header">
                     <h4>Main Contact</h4>
                 </div>
                 <section id="team">
                     <div class="row justify-content-md-center">
-                        <div class="col-lg-3 col-md-5 wow fadeInUp">
-                            <div class="member">
-                                <img src="img/color1.jpg" class="img-fluid">
-                                <div class="member-info">
-                                    <div class="member-info-content">
-                                        <h4>Angitha Mriduraj</h4>
-                                        <span>High School Mentorship Director</span>
-                                        <h5>Cell and Molecular Biology and Immunology</h5>
-                                        <div class="social">
-                                            <a href="mailto:hs.mentorship@wise.skule.ca"><i class="fa fa-envelope"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <p> hs.mentorship@wise.skule.ca  </p>
                         </div>
-                            
-                        <!-- <div class="col-lg-3 col-md-5 wow fadeInUp">
-                            <div class="member">
-                                <img src="img/team/randa.jpg" class="img-fluid" alt="">
-                                <div class="member-info">
-                                    <div class="member-info-content">
-                                        <h4>Randa Higazy</h4>
-                                        <span>High School Outreach Director</span>
-                                        <h5>Chemistry, Physiology</h5>
-                                        <div class="social">
-                                            <a href="mailto:randa.higazy@wiseuoft.org"><i class="fa fa-envelope"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </section>
 
@@ -238,7 +221,7 @@
                     <div class="col-sm-4">
                         <div class="footer-links">
                             <h4>Email</h4>
-                            <p>president@wise.skule.ca/p>
+                            <p>president@wise.skule.ca</p>
                         </div>
                     </div>
 
