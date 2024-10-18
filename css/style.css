@@ -1175,21 +1175,23 @@ h6 {
 #our-events .card .tag {
     display: inline-block;
     background-color: #8582a87d; 
-    color: #333; 
+    color: #fff; 
     padding: 5px 10px; 
-    border-radius: 12px; 
+    border-radius: 8px; 
     margin-right: 5px; 
     font-size: 0.7em;
+    font-weight: 600;
 }
 
 #our-events .card .tag-highschool {
     display: inline-block;
     background-color: #bd79c971; 
-    color: #333; 
+    color: #fff; 
     padding: 5px 10px; 
-    border-radius: 12px; 
+    border-radius: 8px; 
     margin-right: 5px; 
     font-size: 0.7em;
+    font-weight: 600;
 }
 
 #our-events .card p {
