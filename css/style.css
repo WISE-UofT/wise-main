@@ -1207,8 +1207,8 @@ h6 {
 
 #our-events .card .tag-tech {
     display: inline-block;
-    background-color: #83AAE6; 
-    color: #fff; 
+    background-color: #83abe64c; 
+    color: #83abe6; 
     padding: 5px 10px; 
     border-radius: 8px; 
     margin-right: 5px; 
@@ -1218,8 +1218,8 @@ h6 {
 
 #our-events .card .tag-math {
     display: inline-block;
-    background-color: #bd79c971; 
-    color: #fff; 
+    background-color: #ef785a4d; 
+    color: #ef785a; 
     padding: 5px 10px; 
     border-radius: 8px; 
     margin-right: 5px; 
@@ -1229,8 +1229,8 @@ h6 {
 
 #our-events .card .tag-eng {
     display: inline-block;
-    background-color: #bd79c971; 
-    color: #fff; 
+    background-color: #fec7483e; 
+    color: #FEC848; 
     padding: 5px 10px; 
     border-radius: 8px; 
     margin-right: 5px; 
