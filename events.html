@@ -111,7 +111,38 @@
                         <div class="card d-flex flex-row align-items-center">
                             <div class="card-block">
                                 <!-- Card Content -->
-                                <h4 class="card-title">October 9th, 2024</h4>
+                                <h4 class="card-title">November 14, 2024</h4>
+                                <div class="card-header">
+                                    <h3>Fall WISE and Cheese</h3>
+                                </div>
+                                <p>
+                                    ​WISE and Cheese is our biannual networking session with our sponsor companies. Students will get the opportunity to participate in round table discussions with company representatives to inquire about career opportunities, industry life, and more!
+                                </p>
+                                <!-- Button -->
+                                <a href="https://lu.ma/xl91agwg" target="_blank" class="btn-current" data-date="2024-11-15">Register Here!</a>
+                                <!-- Tags -->
+                                <div class="tags">
+                                    <span class="tag-university">University</span>
+                                    <span class="tag-science">Science</span>
+                                    <span class="tag-tech">Tech</span>
+                                    <span class="tag-eng">Engineering</span>
+                                    <span class="tag-math">Math</span> 
+                                </div>
+                            </div>
+                            <!-- Image  -->
+                            <div class="image-container">
+                                <img src="img/events/Wise_&_Cheese.png" class="img-fluid" alt="comm-outreach">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row flex-items-lg-middle flex-items-lg-center">
+                    <div class="col-lg-12 col-lg-6 mx-auto d-block wow bounceInUp" data-wow-duration="1.4s">
+                        <div class="card d-flex flex-row align-items-center">
+                            <div class="card-block">
+                                <!-- Card Content -->
+                                <h4 class="card-title">October 9, 2024</h4>
                                 <div class="card-header">
                                     <h3>Hiring Manager's Insights</h3>
                                 </div>
@@ -121,11 +152,11 @@
                                     industry!
                                 </p>
                                 <!-- Button -->
-                                <a href="" target="_blank" class="btn" data-date="2024-10-09">Register Here!</a>
+                                <a href="" target="_blank" class="btn-current" data-date="2024-10-09">Register Here!</a>
                                 <!-- Tags -->
                                 <div class="tags">
-                                    <span class="tag-science">Science</span>
                                     <span class="tag-university">University</span>
+                                    <span class="tag-science">Science</span>
                                 </div>
                             </div>
                             <!-- Image  -->
@@ -141,7 +172,7 @@
                         <div class="card d-flex flex-row align-items-center">
                             <div class="card-block">
                                 <!-- Card Content -->
-                                <h4 class="card-title">October 2nd, 2024</h4>
+                                <h4 class="card-title">October 2, 2024</h4>
                                 <div class="card-header">
                                     <h3>Women in Technology Panel</h3>
                                 </div>
@@ -154,11 +185,12 @@
                                     the next step in your career!
                                 </p>
                                 <!-- Button -->
-                                <a href="" target="_blank" class="btn" data-date="2024-10-02">Register Here!</a>
+                                <a href="" target="_blank" class="btn-current" data-date="2024-10-02">Register Here!</a>
                                 <!-- Tags -->
                                 <div class="tags">
-                                    <span class="tag-science">Science</span>
                                     <span class="tag-university">University</span>
+                                    <span class="tag-science">Science</span>
+                                    <span class="tag-tech">Tech</span>
                                 </div>
                             </div>
                             <!-- Image  -->
@@ -168,7 +200,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </section>
     </main>
@@ -243,14 +274,14 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const buttons = document.querySelectorAll(".btn");
+            const buttons = document.querySelectorAll(".btn-current");
 
             buttons.forEach(button => {
                 const eventDate = new Date(button.getAttribute("data-date"));
                 const today = new Date();
 
                 if (eventDate < today) {
-                    button.classList.replace("btn", "btn-disabled");
+                    button.classList.replace("btn-current", "btn-disabled");
                 }
             });
         });
