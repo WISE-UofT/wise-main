@@ -1137,28 +1137,114 @@ h6 {
 
 #our-events .card .card-header {
     background-color: white;
-    border-bottom: 0px;
-    -moz-text-align-last: center;
-    text-align-last: center;
+    border-bottom: 15px;
+    -moz-text-align-last: left;
+    text-align-last: left;
+    padding-bottom: 5;
+    padding-left: 0;
+    padding-top: 0;
 }
 
 #our-events .card .card-title {
-    margin-bottom: 16px;
-    font-weight: 600;
-    color: #535074;
+    font-weight: 500;
+    color: #9892b6;
+    font-size: medium;
 }
 
 #our-events .card .card-block {
     padding-top: 0;
-    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: left;
 }
+
+#our-events .card .image-container {
+    flex: 0 0 340px;   
+    padding-right: 40px;
+   
+}
+
+#our-events .card img {
+    border-radius: 10px;
+}
+
+#our-events .card .tags {
+    padding-top: 15px;
+}
+
+#our-events .card .tag-highschool {
+    display: inline-block;
+    background-color: #B192E2; 
+    color: #fff; 
+    padding: 5px 10px; 
+    border-radius: 8px; 
+    margin-right: 5px; 
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+#our-events .card .tag-university {
+    display: inline-block;
+    background-color: #8c8af33f; 
+    color: #8c8af3; 
+    padding: 5px 10px; 
+    border-radius: 8px; 
+    margin-right: 5px;       
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+#our-events .card .tag-science {
+    display: inline-block;
+    background-color: #f1affd6d; 
+    color: #ec8efc; 
+    padding: 5px 10px; 
+    border-radius: 8px; 
+    margin-right: 5px; 
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+#our-events .card .tag-tech {
+    display: inline-block;
+    background-color: #83AAE6; 
+    color: #fff; 
+    padding: 5px 10px; 
+    border-radius: 8px; 
+    margin-right: 5px; 
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+#our-events .card .tag-math {
+    display: inline-block;
+    background-color: #bd79c971; 
+    color: #fff; 
+    padding: 5px 10px; 
+    border-radius: 8px; 
+    margin-right: 5px; 
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
+#our-events .card .tag-eng {
+    display: inline-block;
+    background-color: #bd79c971; 
+    color: #fff; 
+    padding: 5px 10px; 
+    border-radius: 8px; 
+    margin-right: 5px; 
+    font-size: 0.7em;
+    font-weight: 600;
+}
+
 
 #our-events .card p {
     border: 1px;
-    padding: 6px;
     color: #413e66;
     font-weight: 500;
-    text-align: center;
+    text-align: left;
+    margin-bottom: 15px;
 }
 
 #our-events .card h3 {
@@ -1216,6 +1302,20 @@ h6 {
     display: inline-block;
     background: #4a148c;
     color: #fff;
+}
+
+#our-events .card .btn-disabled {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 0;
+    padding: 10px 24px;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    display: inline-block;
+    background: #8582a8;
+    color: #fff;
+    pointer-events: none;
 }
 
 #our-events .card .btn-current:hover {
