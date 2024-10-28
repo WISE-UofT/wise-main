@@ -1172,10 +1172,10 @@ h6 {
     padding-top: 15px;
 }
 
-#our-events .card .tag-highschool {
+#our-events .tag-highschool {
     display: inline-block;
-    background-color: #B192E2; 
-    color: #fff; 
+    background-color: #a97def4e; 
+    color: #8f6ec5; 
     padding: 5px 10px; 
     border-radius: 8px; 
     margin-right: 5px; 
@@ -1183,7 +1183,7 @@ h6 {
     font-weight: 600;
 }
 
-#our-events .card .tag-university {
+#our-events .tag-university {
     display: inline-block;
     background-color: #8c8af33f; 
     color: #8c8af3; 
@@ -1194,7 +1194,7 @@ h6 {
     font-weight: 600;
 }
 
-#our-events .card .tag-science {
+#our-events .tag-science {
     display: inline-block;
     background-color: #f1affd6d; 
     color: #ec8efc; 
@@ -1205,7 +1205,7 @@ h6 {
     font-weight: 600;
 }
 
-#our-events .card .tag-tech {
+#our-events .tag-tech {
     display: inline-block;
     background-color: #83abe64c; 
     color: #83abe6; 
@@ -1216,7 +1216,7 @@ h6 {
     font-weight: 600;
 }
 
-#our-events .card .tag-math {
+#our-events .tag-math {
     display: inline-block;
     background-color: #ef785a4d; 
     color: #ef785a; 
@@ -1227,7 +1227,7 @@ h6 {
     font-weight: 600;
 }
 
-#our-events .card .tag-eng {
+#our-events .tag-eng {
     display: inline-block;
     background-color: #fec7483e; 
     color: #FEC848; 
@@ -1238,6 +1238,28 @@ h6 {
     font-weight: 600;
 }
 
+#our-events .filter-button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    padding: 15px;
+}
+
+#our-events .filter-button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 0.7em;
+    font-weight: 600;
+    border: none;  
+}
+
+#our-events .filter-button:focus, 
+#our-events .filter-button:active {
+    border: 4px solid #fff;  
+    outline: none;               
+}
 
 #our-events .card p {
     border: 1px;
