@@ -112,7 +112,7 @@
                     <button class="filter-button tag-university" data-tag="University">University</button>
                     <button class="filter-button tag-science" data-tag="Science">Science</button>
                     <button class="filter-button tag-tech" data-tag="Tech">Tech</button>
-                    <button class="filter-button tag-eng" data-tag="Engineering">Engineering</button>
+                    <button class="filter-button tag-engineering" data-tag="Engineering">Engineering</button>
                     <button class="filter-button tag-math" data-tag="Math">Math</button>
                 </div>
 
@@ -140,7 +140,7 @@
                                     <span class="tag-university">University</span>
                                     <span class="tag-science">Science</span>
                                     <span class="tag-tech">Tech</span>
-                                    <span class="tag-eng">Engineering</span>
+                                    <span class="tag-engineering">Engineering</span>
                                     <span class="tag-math">Math</span>
                                 </div>
                             </div>
@@ -217,6 +217,8 @@
                 </div>
             </div>
         </section>
+
+        <section id="negative-spacer"></section>
     </main>
 
     <!--=====Footer======-->
@@ -303,6 +305,45 @@
         });
     </script>
 
+    <!-- Filtering by Tags -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll(".filter-button");
+            const rows = document.querySelectorAll(".row.flex-items-lg-middle.flex-items-lg-center"); // each card
+
+            filterButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const tag = button.getAttribute("data-tag").toLowerCase(); // name of tag
+
+                    if (button.classList.contains("active")) {
+                        resetFilter();
+                        button.classList.remove("active");
+                    } else {
+                        filterButtons.forEach(btn => btn.classList.remove("active"));
+                        button.classList.add("active");
+                        filterRows(tag);
+                    }
+
+                    button.blur();
+                });
+            });
+
+            function filterRows(tag) {
+                rows.forEach(row => {
+                    const hasMatchingCard = row.querySelector(`.tag-${tag}`) !== null;
+
+                    row.style.display = hasMatchingCard ? 'block' : 'none';
+                });
+
+                container.style.display = 'flex';
+            }
+
+            function resetFilter() {
+                rows.forEach(row => row.style.display = 'block');
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+            }
+        });
+    </script>
 </body>
 
 </html>

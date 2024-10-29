@@ -191,6 +191,13 @@ h6 {
     background-size: cover;
 }
 
+#negative-spacer {
+    width: 100%;
+    height: 0;
+    margin-top: -3vh; /* Adjust to control how much space is removed */
+    position: relative;
+}
+
 #past-events-display {
     max-width: 100%;
     padding-bottom: 30px;
@@ -1227,7 +1234,7 @@ h6 {
     font-weight: 600;
 }
 
-#our-events .tag-eng {
+#our-events .tag-engineering {
     display: inline-block;
     background-color: #fec7483e; 
     color: #FEC848; 
@@ -1257,7 +1264,7 @@ h6 {
 
 #our-events .filter-button:focus, 
 #our-events .filter-button:active {
-    border: 4px solid #fff;  
+    border: 4px solid #4444447c;  
     outline: none;               
 }
 
@@ -1714,7 +1721,7 @@ h6 {
     margin-left: 5px;
 }
 
-.active:after {
+.opportunities .active:after {
     content: "\2212";
 }
 
