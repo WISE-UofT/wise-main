@@ -106,6 +106,17 @@
                 <!-- <iframe style="padding-bottom: 1rem;" src="https://calendar.google.com/calendar/b/1/embed?height=600&amp;wkst=1&amp;bgcolor=%23f8f5fd&amp;ctz=America%2FToronto&amp;src=djA4OWRycGlsYTVuNnM1cDg0Nm4wazZiNXNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=ZDE1b250Mjd0bG1tcGY1ZDRkdG50bWphNGtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%230D7813&amp;color=%237A367A;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;title=WISE%20UofT%20Event%20Calendar" 
                     style="border-width:0" width="100%" height="600" frameborder="0" scrolling="no"></iframe> -->
 
+                <!-- Filter Buttons -->
+                <div class="filter-button-container">
+                    <button class="filter-button tag-highschool" data-tag="Highschool">Highschool</button>
+                    <button class="filter-button tag-university" data-tag="University">University</button>
+                    <button class="filter-button tag-science" data-tag="Science">Science</button>
+                    <button class="filter-button tag-tech" data-tag="Tech">Tech</button>
+                    <button class="filter-button tag-engineering" data-tag="Engineering">Engineering</button>
+                    <button class="filter-button tag-math" data-tag="Math">Math</button>
+                </div>
+
+
                 <div class="row flex-items-lg-middle flex-items-lg-center">
                     <div class="col-lg-12 col-lg-6 mx-auto d-block wow bounceInUp" data-wow-duration="1.4s">
                         <div class="card d-flex flex-row align-items-center">
@@ -116,17 +127,21 @@
                                     <h3>Fall WISE and Cheese</h3>
                                 </div>
                                 <p>
-                                    ​WISE and Cheese is our biannual networking session with our sponsor companies. Students will get the opportunity to participate in round table discussions with company representatives to inquire about career opportunities, industry life, and more!
+                                    ​WISE and Cheese is our biannual networking session with our sponsor companies.
+                                    Students will get the opportunity to participate in round table discussions with
+                                    company representatives to inquire about career opportunities, industry life, and
+                                    more!
                                 </p>
                                 <!-- Button -->
-                                <a href="https://lu.ma/xl91agwg" target="_blank" class="btn-current" data-date="2024-11-15">Register Here!</a>
+                                <a href="https://lu.ma/xl91agwg" target="_blank" class="btn-current"
+                                    data-date="2024-11-15">Register Here!</a>
                                 <!-- Tags -->
                                 <div class="tags">
                                     <span class="tag-university">University</span>
                                     <span class="tag-science">Science</span>
                                     <span class="tag-tech">Tech</span>
-                                    <span class="tag-eng">Engineering</span>
-                                    <span class="tag-math">Math</span> 
+                                    <span class="tag-engineering">Engineering</span>
+                                    <span class="tag-math">Math</span>
                                 </div>
                             </div>
                             <!-- Image  -->
@@ -202,6 +217,8 @@
                 </div>
             </div>
         </section>
+
+        <section id="negative-spacer"></section>
     </main>
 
     <!--=====Footer======-->
@@ -272,6 +289,7 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <!-- Automatically disable registration for old events -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const buttons = document.querySelectorAll(".btn-current");
@@ -287,6 +305,45 @@
         });
     </script>
 
+    <!-- Filtering by Tags -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const filterButtons = document.querySelectorAll(".filter-button");
+            const rows = document.querySelectorAll(".row.flex-items-lg-middle.flex-items-lg-center"); // each card
+
+            filterButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    const tag = button.getAttribute("data-tag").toLowerCase(); // name of tag
+
+                    if (button.classList.contains("active")) {
+                        resetFilter();
+                        button.classList.remove("active");
+                    } else {
+                        filterButtons.forEach(btn => btn.classList.remove("active"));
+                        button.classList.add("active");
+                        filterRows(tag);
+                    }
+
+                    button.blur();
+                });
+            });
+
+            function filterRows(tag) {
+                rows.forEach(row => {
+                    const hasMatchingCard = row.querySelector(`.tag-${tag}`) !== null;
+
+                    row.style.display = hasMatchingCard ? 'block' : 'none';
+                });
+
+                container.style.display = 'flex';
+            }
+
+            function resetFilter() {
+                rows.forEach(row => row.style.display = 'block');
+                filterButtons.forEach(btn => btn.classList.remove("active"));
+            }
+        });
+    </script>
 </body>
 
 </html>
