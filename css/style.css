@@ -595,10 +595,14 @@ h6 {
     padding-bottom: 10px;
 }
 
-#mission .mission-content ul li i ol {
+#mission .mission-content ul li i ol b {
     font-size: 20px;
     padding-right: 4px;
     color: #4a148c;
+}
+
+#mission .mission-content b {
+    color: #2d2b46;
 }
 
 #mission .mission-img {
@@ -620,25 +624,25 @@ h6 {
 
 #mission .mission-img::before {
     position: absolute;
-    left: -31px;
+    /* left: -31px;
     top: -30px;
     width: 90%;
     height: 92%;
     z-index: -1;
     content: '';
-    background-color: #f8f5fd;
+    background-color: #f8f5fd; */
     transition: .5s;
 }
 
 #mission .mission-img::after {
     position: absolute;
-    right: -31px;
+    /* right: -31px;
     bottom: -30px;
     width: 90%;
     height: 92%;
     z-index: -1;
     content: '';
-    background-color: #f8f5fd;
+    background-color: #f8f5fd; */
     transition: .5s;
 }
 
