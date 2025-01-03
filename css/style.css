@@ -458,7 +458,7 @@ h6 {
 .section-header h3 {
     font-size: 36px;
     color: #413e66;
-    text-align: center;
+    text-align: left ;
     font-weight: 700;
     position: relative;
     font-family: "Montserrat", sans-serif;
@@ -476,16 +476,17 @@ h6 {
 }
 
 .section-header p {
-    text-align: center;
-    margin: auto;
+    text-align: left;
+    /* margin: auto; */
     font-size: 17px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     color: #535074;
     width: 70%;
 }
 
 .section-bg {
     background: #f8f5fd;
+    background-color: rgba(244, 242, 255, 1);
 }
 
 #about {
@@ -543,87 +544,6 @@ h6 {
 
 #about .about-img::before {
     position: absolute;
-    left: -31px;
-    top: -30px;
-    width: 90%;
-    height: 92%;
-    z-index: -1;
-    content: '';
-    background-color: #f8f5fd;
-    transition: .5s;
-}
-
-#about .about-img::after {
-    position: absolute;
-    right: -31px;
-    bottom: -30px;
-    width: 90%;
-    height: 92%;
-    z-index: -1;
-    content: '';
-    background-color: #f8f5fd;
-    transition: .5s;
-}
-
-#mission {
-    padding: 60px 0;
-}
-
-#mission .mission-content {
-    padding-top: 40px;
-}
-
-#mission .mission-content h2 {
-    color: #413e66;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-}
-
-#mission .mission-content h3 {
-    color: #696592;
-    font-weight: 400;
-    font-size: 22px;
-    font-style: italic;
-}
-
-#mission .mission-content ul {
-    list-style: none;
-    padding: 0;
-}
-
-#mission .mission-content ul li {
-    padding-bottom: 10px;
-}
-
-#mission .mission-content ul li i ol b {
-    font-size: 20px;
-    padding-right: 4px;
-    color: #4a148c;
-}
-
-#mission .mission-content b {
-    color: #2d2b46;
-}
-
-#mission .mission-img {
-    position: relative;
-    margin: 30px 30px 30px 30px;
-}
-
-#mission .mission-img img {
-    width: 100%;
-    border: 8px solid #fff;
-    transition: .5s;
-}
-
-#mission .mission-img img:hover {
-    width: 100%;
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-}
-
-#mission .mission-img::before {
-    position: absolute;
     /* left: -31px;
     top: -30px;
     width: 90%;
@@ -634,7 +554,7 @@ h6 {
     transition: .5s;
 }
 
-#mission .mission-img::after {
+#about .about-img::after {
     position: absolute;
     /* right: -31px;
     bottom: -30px;
@@ -644,6 +564,15 @@ h6 {
     content: '';
     background-color: #f8f5fd; */
     transition: .5s;
+}   
+
+#mission .mission-content {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    color: #000000;
+    font-size: 24px;
+    line-height: 1.5;
+    /* font-style: italic; */
 }
 
 #apply-btn {
