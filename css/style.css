@@ -457,10 +457,12 @@ h6 {
     color: #fff;
 }
 
+
+
 .section-header h3 {
     font-size: 36px;
     color: #413e66;
-    text-align: left ;
+    text-align: center ;
     font-weight: 700;
     position: relative;
     font-family: "Montserrat", sans-serif;
@@ -511,6 +513,15 @@ h6 {
     font-weight: 400;
     font-size: 22px;
     font-style: italic;
+}
+
+.section-header p {
+    text-align: center;
+    /* margin: auto; */
+    font-size: 17px;
+    /* padding-bottom: 20px; */
+    color: #535074;
+    width: 100%;
 }
 
 #about .about-content ul {
@@ -618,6 +629,16 @@ h6 {
     box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
     transition: all 0.3s ease-in-out;
     text-align: center;
+}
+
+#initiatives .section-header h3 {
+    font-size: 36px;
+    color: #413e66;
+    text-align: left ;
+    font-weight: 700;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    /* padding-top: 60px; */
 }
 
 #initiatives .box:hover {
