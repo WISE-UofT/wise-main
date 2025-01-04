@@ -204,76 +204,61 @@ h6 {
 }
 
 #intro {
-    width: 100%;
+    /* width: 100%; */
     height: 100vh;
     position: relative;
-    background: #f8f5fd url("../img/wiseconference2024/execteamphoto.jpg") top no-repeat;
+    background: #f8f5fd url("../img/landing-bg.png") top no-repeat;
     background-size: cover;
+    z-index: 1;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.intro-layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 25%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.8);
+#intro .container {
+    position: relative;
+    z-index: 2;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+    align-items: start;
 }
 
-#intro .intro-info {
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    padding-right: 10px;
+#intro .logo-img {
+   max-width: 700px;
+   padding-top: 300px;
+   padding-left: 50px;
 }
 
-#intro .intro-info h2 {
-    color: #301941;
-    font-size: 36px;
-    font-weight: 700;
-    padding: 0;
-    width: 100%; 
-    text-align: right;
+#intro .container {
+    position: relative;
+    z-index: 2;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+    align-items: start;
 }
 
-/* #intro .intro-info h2 {
-    color: #301941;
-    margin-right: 75%;  
-    font-size: 36px;
-    font-weight: 700;
-    padding-right: 0px;
-    width: 180px;
-    text-align: right;
-} */
-
-#intro .intro-info h2 span {
-    color: #301934;
+#intro .intro-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400; /* Open Sans Regular */
+    font-size: 30px; 
+    color: #fff; 
+    padding-left: 70px;
+    margin: 0px;
 }
 
-#intro .text-right {
-    text-align: right;
+#intro .intro-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300; /* Open Sans Light */
+    font-size: 24px; 
+    color: #ddd; 
+    padding-left: 70px;
 }
 
-#intro .intro-info .btn-get-started,
-#intro .intro-info .btn-initiatives {
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 10px 32px;
-    border-radius: 4px;
-    transition: 0.5s;
-    color: #fff;
-    background: #4a148c;
-    color: #fff;
-}
-
-#intro .intro-info .btn-get-started:hover,
-#intro .intro-info .btn-initiatives:hover {
-    background: #8e24aa;
-}
 
 .main-nav,
 .main-nav * {
@@ -472,10 +457,12 @@ h6 {
     color: #fff;
 }
 
+
+
 .section-header h3 {
     font-size: 36px;
     color: #413e66;
-    text-align: center;
+    text-align: center ;
     font-weight: 700;
     position: relative;
     font-family: "Montserrat", sans-serif;
@@ -493,16 +480,17 @@ h6 {
 }
 
 .section-header p {
-    text-align: center;
-    margin: auto;
+    text-align: left;
+    /* margin: auto; */
     font-size: 17px;
-    padding-bottom: 20px;
+    /* padding-bottom: 20px; */
     color: #535074;
     width: 70%;
 }
 
 .section-bg {
     background: #f8f5fd;
+    background-color: rgba(244, 242, 255, 1);
 }
 
 #about {
@@ -511,6 +499,7 @@ h6 {
 
 #about .about-content {
     padding-top: 40px;
+    font-family: "Montserrat", sans-serif;
 }
 
 #about .about-content h2 {
@@ -524,6 +513,15 @@ h6 {
     font-weight: 400;
     font-size: 22px;
     font-style: italic;
+}
+
+.section-header p {
+    text-align: center;
+    /* margin: auto; */
+    font-size: 17px;
+    /* padding-bottom: 20px; */
+    color: #535074;
+    width: 100%;
 }
 
 #about .about-content ul {
@@ -560,103 +558,54 @@ h6 {
 
 #about .about-img::before {
     position: absolute;
-    left: -31px;
+    /* left: -31px;
     top: -30px;
     width: 90%;
     height: 92%;
     z-index: -1;
     content: '';
-    background-color: #f8f5fd;
+    background-color: #f8f5fd; */
     transition: .5s;
 }
 
 #about .about-img::after {
     position: absolute;
-    right: -31px;
+    /* right: -31px;
     bottom: -30px;
     width: 90%;
     height: 92%;
     z-index: -1;
     content: '';
-    background-color: #f8f5fd;
+    background-color: #f8f5fd; */
     transition: .5s;
-}
-
-#mission {
-    padding: 60px 0;
-}
+}   
 
 #mission .mission-content {
-    padding-top: 40px;
-}
-
-#mission .mission-content h2 {
-    color: #413e66;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    color: #000000;
+    font-size: 24px;
+    line-height: 1.5;
     font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    /* font-style: italic; */
 }
 
-#mission .mission-content h3 {
-    color: #696592;
-    font-weight: 400;
-    font-size: 22px;
-    font-style: italic;
+#pastevents .thumbnail {
+    display: flex;  
+    padding-bottom: 40px;              
 }
 
-#mission .mission-content ul {
-    list-style: none;
-    padding: 0;
+#pastevents .thumbnail img {
+    padding-bottom: 10px;         /* Space between image and caption */
+    max-height: 240px;            
+    width: 100%;                  
 }
 
-#mission .mission-content ul li {
-    padding-bottom: 10px;
-}
-
-#mission .mission-content ul li i ol {
-    font-size: 20px;
-    padding-right: 4px;
-    color: #4a148c;
-}
-
-#mission .mission-img {
-    position: relative;
-    margin: 30px 30px 30px 30px;
-}
-
-#mission .mission-img img {
-    width: 100%;
-    border: 8px solid #fff;
-    transition: .5s;
-}
-
-#mission .mission-img img:hover {
-    width: 100%;
-    -webkit-transform: scale(1.03);
-    transform: scale(1.03);
-}
-
-#mission .mission-img::before {
-    position: absolute;
-    left: -31px;
-    top: -30px;
-    width: 90%;
-    height: 92%;
-    z-index: -1;
-    content: '';
-    background-color: #f8f5fd;
-    transition: .5s;
-}
-
-#mission .mission-img::after {
-    position: absolute;
-    right: -31px;
-    bottom: -30px;
-    width: 90%;
-    height: 92%;
-    z-index: -1;
-    content: '';
-    background-color: #f8f5fd;
-    transition: .5s;
+#pastevents .thumbnail .caption p {
+    text-align: center;           
+    width: 100%;  
+    color:#000000;
+    font-family: "Montserrat", sans-serif;
 }
 
 #apply-btn {
@@ -680,6 +629,16 @@ h6 {
     box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
     transition: all 0.3s ease-in-out;
     text-align: center;
+}
+
+#initiatives .section-header h3 {
+    font-size: 36px;
+    color: #413e66;
+    text-align: left ;
+    font-weight: 700;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    /* padding-top: 60px; */
 }
 
 #initiatives .box:hover {
@@ -1596,12 +1555,14 @@ h6 {
     }
 }
 
+/* Large screens */
 @media (min-width: 992px) {
     #intro .intro-info {
         padding-top: 80px;
     }
 }
 
+/* Medium screens (max-width: 991px) */
 @media (max-width: 991px) {
     #topbar {
         display: none;
@@ -1632,7 +1593,59 @@ h6 {
     #about-this-event {
         padding-bottom: 30px;
     }
+
+    #intro .logo-img {
+        max-width: 400px; 
+    }
+
+    #intro .intro-title {
+        font-size: 30px; 
+    }
+
+    #intro .intro-subtitle {
+        font-size: 20px;
+    }
 }
+
+
+/* Default styles for large screens */
+#intro .logo-img {
+    max-width: 550px;
+}
+
+#intro .intro-title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 36px; 
+    color: #fff;
+    margin-top: 20px;
+}
+
+#intro .intro-subtitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 24px; 
+    color: #ddd;
+    margin-top: 10px;
+}
+
+/* Medium screens (max-width: 991px) */
+@media (max-width: 991px) {
+    #intro .logo-img {
+        max-width: 400px; 
+    }
+
+    #intro .intro-title {
+        font-size: 30px; 
+        padding-left: 60px;
+    }
+
+    #intro .intro-subtitle {
+        font-size: 20px; 
+        padding-left: 60px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .back-to-top {
@@ -1646,8 +1659,10 @@ h6 {
     #faq #faq-list i {
         top: 13px;
     }
+    
 }
 
+/* Small screens (max-width: 767px) */
 @media (max-width: 767px) {
     #intro {
         height: auto;
@@ -1658,16 +1673,12 @@ h6 {
         width: 100%;
         height: 100vh;
         position: relative;
-        background: #f8f5fd url("../img/intro-xs.jpg") center top no-repeat;
+        background: #f8f5fd url("../img/landing-bg.png") center top no-repeat;
         background-size: cover;
     }
 
     #intro .container {
         height: auto !important;
-    }
-
-    #intro .intro-img {
-        width: 80%;
     }
 
     #intro .intro-info {
@@ -1686,11 +1697,43 @@ h6 {
     .section-header p {
         width: 100%;
     }
+    #intro .logo-img {
+        max-width: 300px; 
+    }
+
+    #intro .intro-title {
+        font-size: 24px; 
+        padding-left: 60px;
+    }
+
+    #intro .intro-subtitle {
+        font-size: 18px; 
+        padding-left: 60px;
+    }
+    
+
+    
 }
 
+
+/* Extra small screens (max-width: 574px) */
 @media (max-width: 574px) {
     #footer .footer-top .social-links a {
         margin-bottom: 25px;
+    }
+    
+    #intro .logo-img {
+        max-width: 200px; 
+    }
+
+    #intro .intro-title {
+        font-size: 20px; 
+        padding-left: 55px;
+    }
+
+    #intro .intro-subtitle {
+        font-size: 16px; 
+        padding-left: 55px;
     }
 }
 
