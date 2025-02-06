@@ -1080,6 +1080,54 @@ h6 {
     margin: 0 2px;
 }
 
+#team-intro {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 80px;
+    margin-top: 70px;
+}
+
+#team-intro p {
+    font-size: 20px;
+}
+
+#team-intro .text-content {
+    flex: 1;
+}
+
+#team-intro .text-content h4 {
+    font-weight: bold;
+    font-size: 35px;
+}
+#team-intro .highlight-light-purple {
+    color: #8177c7;
+    background-color: #afa8df2f;
+}
+#team-intro .highlight-purple {
+    color: #6a5acd;
+    background-color: #e6e6fa;
+}
+
+#team-intro .highlight-gold {
+    color: #8b8000;
+    background-color: #fffacd;
+}
+
+#team-intro .img-fluid {
+    object-fit: cover; 
+    display: block;
+    border-radius: 10px;
+}
+
+#team .team-section-bg {
+    background-color: rgb(244, 242, 255, 100); 
+    width: 100%; 
+    margin-bottom: 100px;
+    padding-top: 30px;
+    margin-top: 60px;
+}
+
 #our-events .card {
     border-style: solid;
     border: 200px;
