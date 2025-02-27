@@ -987,97 +987,55 @@ h6 {
     opacity: 1;
 }
 
+#team .member img {
+    display: block; 
+    width: 200px; 
+    border-radius: 10px;
+    object-fit: cover;
+    height: auto;
+}
+
 #team .member {
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+    background: white; 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 220px;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 50px;
 }
 
 #team .member .member-info {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: 0.2s;
-    padding: 15px 0;
-    background: rgba(30, 41, 28, 0.6);
-}
-
-#team .member .member-info-content {
-    transition: margin 0.2s;
-    height: 60px;
-    transition: height 0.4s;
-}
-
-#team .member .member-info-content-long {
-    transition: margin 0.2s;
-    height: 70px;
-    transition: height 0.4s;
-}
-
-#team .member:hover .member-info {
-    transition: 0.4s;
-}
-
-#team .member:hover .member-info-content {
-    height: 100px;
-}
-
-#team .member:hover .member-info-content-long {
-    height: 110px;
+    padding-top: 10px;
 }
 
 #team .member h4 {
     font-weight: 700;
     margin-bottom: 2px;
-    font-size: 18px;
-    color: #fff;
-}
-
-#team .member h5 {
-    font-family: "Open Sans", sans-serif;
-    font-style: italic;
-    display: block;
-    font-size: 14px;
-    color: #fff;
+    font-size: 16px;
+    color: black;    
 }
 
 #team .member span {
-    font-style: normal;
-    display: block;
     font-size: 14px;
-    color: #fff;
+    color: black;
+    display: block; 
+    word-wrap: break-word; /* forces word-wrapping if needed */
+    white-space: normal; 
 }
 
-#team .member .social {
-    margin-top: 15px;
-}
-
-#team .member .social a {
-    transition: 0.4s;
-    color: #fff;
-}
-
-#team .member .social a:hover {
-    color: #b39ddb;
-}
-
-#team .member .social i {
-    font-size: 18px;
-    margin: 0 2px;
+.team-section-header h4 { /* title of each team */
+    text-align: left;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    padding-left: 60px;
+    position: relative;
+    font-family: 'Open Sans', sans-serif; 
+    font-weight: 700;
+    color: #444;
 }
 
 #team-intro {
