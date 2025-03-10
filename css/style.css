@@ -1602,6 +1602,7 @@ h6 {
 
     #intro .logo-img {
         max-width: 400px; 
+        padding-top: 300px;
     }
 
     #intro .intro-title {
@@ -1613,6 +1614,12 @@ h6 {
     }
 }
 
+/* Nest Hub Screen Overflow */
+@media (max-width: 1025px) {
+    #intro .logo-img {
+        padding-top: 250px;
+    }
+}
 
 /* Default styles for large screens */
 #intro .logo-img {
