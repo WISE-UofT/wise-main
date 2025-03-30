@@ -541,7 +541,7 @@ h6 {
 
 #about .about-img {
     position: relative;
-    margin: 30px 30px 30px 30px;
+    margin: 30px 30px 0px 30px;
 }
 
 #about .about-img img {
@@ -554,6 +554,19 @@ h6 {
     width: 100%;
     -webkit-transform: scale(1.03);
     transform: scale(1.03);
+}
+
+#about .thumb-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#about .thumb-img {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
 }
 
 #about .about-img::before {

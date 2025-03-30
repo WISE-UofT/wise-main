@@ -122,14 +122,20 @@
                     <div class="col-lg-6 col-md-12 ">
                         <div class="about-content">
                             <h2>ABOUT US</h2>
-                            <p> WISE is a group of future engineers, scientists, doctors, leaders, programmers, researchers, and more, who all have the shared <b> goal of supporting women in STEM</b>. At our heart, we are a community that believes <b> women should lift each other up and work together</b>. 
+                            <p> Established in 1999, WISE is a group of future engineers, scientists, doctors, leaders, programmers, researchers, and more, who all have the shared <b> goal of supporting women in STEM</b>. At our heart, we are a community that believes <b> women should lift each other up and work together</b>. 
                             
                             <p>From running events spanning from <em> Spilling the Tea on Research </em> to <em> Plasmid Bracelet Workshops, </em> we are committed to our initiatives not just because we believe they are necessary, but also because we are <b>passionate about our commitment to each other and to all future women in STEM</b>.</p></p>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12">
-                        <div class="about-img">
-                            <img src="img/home-pg-img.png" alt="Climate Positive Research Day" class="img-fluid">
+                        <div class="about-img mb-3">
+                            <img id="mainImage" src="img/home-pg-img.png" class="img-fluid rounded">
+                        </div>
+                        <div class="thumb-container">
+                            <img src="img/home-pg-img.png" class="thumb-img" onclick="changeImage(this)">
+                            <img src="img/wiseconference2025/wise_ice_breaker.png" class="thumb-img" onclick="changeImage(this)">
+                            <img src="img/wiseconference2025/opening_keynote_speech.png" class="thumb-img" onclick="changeImage(this)">
+                            <img src="img/wiseconference2025/career_fair.png" class="thumb-img" onclick="changeImage(this)">
                         </div>
                     </div>
                 </div>
@@ -274,6 +280,12 @@
         </section><!-- #pastevents -->        
     </main>
 
+    <!-- Clickable Thumbnail Images -->
+    <script>
+        function changeImage(el) {
+            document.getElementById('mainImage').src = el.src;
+        }
+    </script>
 
     <!--=====Footer======-->
     <footer id="footer" class="section-bg">
