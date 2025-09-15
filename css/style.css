@@ -203,62 +203,153 @@ h6 {
     padding-bottom: 30px;
 }
 
+
+/*.intro-content {
+  display: flex;
+  width: 100%;
+  gap: 30px; 
+}
+
+
+.intro-left {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 60px;
+    flex: 1; 
+}
+
+.logo-img {
+    max-width: 250px;
+    padding-top: 250px;
+    padding-left: 60px;
+}
+
+.intro-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  color: #fff;
+  padding-left: 60px;
+  margin: 0;
+}
+
+.intro-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 24px;
+  color: #ddd;
+  padding-left: 60px;
+}
+
+
+.intro-right {
+  flex: 2;
+  display: flex;
+  height: 100%;
+}
+
+
+.intro-right .carousel,
+.intro-right .carousel-inner,
+.intro-right .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+
+.intro-right .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+} */
 #intro {
-    /* width: 100%; */
-    height: 100vh;
-    position: relative;
     background: #f8f5fd url("../img/landing-bg.png") top no-repeat;
     background-size: cover;
-    z-index: 1;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
     margin-left: 10px;
     margin-right: 10px;
 }
 
-#intro .container {
-    position: relative;
-    z-index: 2;
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 100%;
-    align-items: start;
+/* First slide (logo + text) centered */
+.intro-slide .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 60px;
 }
 
-#intro .logo-img {
-   max-width: 700px;
-   padding-top: 300px;
-   padding-left: 50px;
+.logo-img {
+  max-width: 400px;
+  margin-bottom: 20px;
 }
 
-#intro .container {
-    position: relative;
-    z-index: 2;
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    max-width: 100%;
-    align-items: start;
+.intro-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
 }
 
-#intro .intro-title {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400; /* Open Sans Regular */
-    font-size: 30px; 
-    color: #fff; 
-    padding-left: 70px;
-    margin: 0px;
+.intro-subtitle {
+  font-size: 1.5rem;
+  color: white;
 }
 
-#intro .intro-subtitle {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300; /* Open Sans Light */
-    font-size: 24px; 
-    color: #ddd; 
-    padding-left: 70px;
+/* Carousel full height */
+.carousel,
+.carousel-inner,
+.carousel-item {
+  height: 100vh;
 }
 
+/* Image box for slides after first */
+.image-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1200px;
+  width: 80%;
+  height: 600px;
+  
+  /*border-radius: 20px;*/
+  overflow: hidden;
+  /*box-shadow: 0 8px 25px rgba(0,0,0,0.3);*/
+  text-align: center;
+  padding-bottom: 15px;
+  margin-top: 30px;
+  /*background: #f8f5fd url("../img/landing-bg.png") top no-repeat;*/
+  display: flex;
+  flex-direction: column;
+
+}
+
+.image-box img {
+    flex: 1;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}
+
+/* Caption under the image */
+.image-box .caption {
+    padding: 15px 20px;
+    font-size: 30px;
+    margin: 12px 20px;
+    color: #fff;
+    text-align: center;
+    font-family: "Indie flower", cursive;
+    border-radius: 0 0 20px 20px;
+}
 
 .main-nav,
 .main-nav * {
@@ -282,7 +373,7 @@ h6 {
     font-size: 15px;
     font-family: "Open Sans", sans-serif;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .main-nav a:hover,

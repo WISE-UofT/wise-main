@@ -34,9 +34,9 @@
     <link href="img/favicon.jpg" rel="icon">
 
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,500,600,700,700i|Montserrat:300,400,500,600,700"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 
     <!-- CSS -->
     <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
@@ -45,6 +45,7 @@
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link href="css/style.css" rel="stylesheet">
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -109,13 +110,91 @@
 
     <!--=====Landing Purple Gradient======-->
     <section id="intro" class="clearfix">
-        <div class="container ">
-            <img src="img/wise-logo-white.png" alt="Logo" class="logo-img">
-            <p class="intro-title">University of Toronto</p>
-            <p class="intro-subtitle">Women in Science and Engineering</p>
+        <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+            <div class="carousel-inner">
+
+                <!-- First Slide: Fullscreen Logo -->
+                <div class="carousel-item active intro-slide">
+                  <div class="container">
+                    <img src="img/wise-logo-white.png" alt="Logo" class="logo-img">
+                    <p class="intro-title">University of Toronto</p>
+                    <p class="intro-subtitle">Women in Science and Engineering</p>
+                  </div>
+                </div>
+
+                <!-- Second Slide: Image Box -->
+                <div class="carousel-item">
+                  <div class="image-box">
+                    <div id="innerCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="img/alumini_gala.jpg" alt="Alumni Gala">
+                          <p class="caption">Alumni Gala — bringing past and present WISE members together.</p>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/conference.JPG" alt="Conference">
+                          <p class="caption">WISE Conference — most awaited and exciting day</p>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/WISE_and_cheese.JPG" alt="WISE and Cheese">
+                          <p class="caption">WISE and cheese — Network and Dine with company reps</p>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/first_year_mixer.jpg" alt="First Year Mixer">
+                          <p class="caption">First-year mixer — Make new friends, memories, and learn about opportunities at WISE</p>
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/hsc.jpg" alt="Highschool Conference">
+                          <p class="caption">High School Conference — inspiring the next generation.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
+    <!-- <section id="intro" class="clearfix">
+        <div class="intro-content"> -->
+        <!-- Left: Logo & Text 
+            <div class="intro-left">
+                <img src="img/wise-logo-white.png" alt="Logo" class="logo-img">
+                <p class="intro-title">University of Toronto</p>
+                <p class="intro-subtitle">Women in Science and Engineering</p>
+            </div>-->
+
+            <!-- Right: Carousel 
+            <div class="intro-right">
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="img/alumini_gala.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/conference_workshop.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/conference.JPG" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/first_year_mixer.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/hsc.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="img/WISE_and_cheese.JPG" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    
+    
+            
     <main id="main">
 
         <!--=====About Us======-->
@@ -328,6 +407,36 @@
 
     <!--=====Webpage Preloader======-->
     <div id="preloader"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const mainCarouselEl = document.querySelector('#mainCarousel');
+          const innerCarouselEl = document.querySelector('#innerCarousel');
+        
+          const mainCarousel = bootstrap.Carousel.getOrCreateInstance(mainCarouselEl, { interval: 6000, wrap: false });
+          const innerCarousel = bootstrap.Carousel.getOrCreateInstance(innerCarouselEl, { interval: 4000, wrap: false });
+        
+          // When outer moves to the second slide, pause it so it doesn't disappear
+          mainCarouselEl.addEventListener('slid.bs.carousel', function (event) {
+            if (event.to === 1) {
+              mainCarousel.pause();
+              innerCarousel.cycle(); // start inner images
+            }
+          });
+      
+          // When inner reaches the last slide, reset everything
+          innerCarouselEl.addEventListener('slid.bs.carousel', function (event) {
+            const totalSlides = innerCarouselEl.querySelectorAll('.carousel-item').length;
+            if (event.to === totalSlides - 1) {
+              setTimeout(() => {
+                innerCarousel.pause();
+                innerCarousel.to(0);        // reset inner
+                mainCarousel.to(0);         // go back to logo
+                mainCarousel.cycle();       // restart outer cycle
+              }, 4000); // delay on last image
+            }
+          });
+        });
+    </script>
 
     <!-- JavaScript Libraries -->
     <script src="lib/jquery/jquery.min.js"></script>
@@ -342,6 +451,7 @@
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 
