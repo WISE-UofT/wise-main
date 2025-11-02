@@ -277,7 +277,7 @@ h6 {
     margin-right: 10px;
 }
 
-/* First slide (logo + text) centered */
+/* First slide (logo + text) */
 .intro-slide .container {
   position: absolute;
   top: 50%;
@@ -1083,7 +1083,7 @@ h6 {
     width: 200px; 
     border-radius: 10px;
     object-fit: cover;
-    height: auto;
+    height: 250px;
 }
 
 #team .member {
