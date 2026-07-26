@@ -1,4 +1,4 @@
-# WISE UofT 2024-2025 Website
+# WISE UofT 2026-2027 Website
 
 https://wiseuoft.org
 
