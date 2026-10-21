@@ -1,0 +1,92 @@
+# Deploy the WISE redesign (Vite + React SPA) to GitHub Pages.
+#
+# HOW THIS WORKS:
+# 1. You push to the branch named below.
+# 2. The "build" job installs dependencies, runs `npm run build`, and uploads
+#    the resulting `dist/` folder as a Pages artifact.
+# 3. The "deploy" job publishes that artifact to GitHub Pages.
+# 4. GitHub serves the site at our custom domain stored in `public/CNAME`
+#    (wise.skule.ca) 
+#
+#
+# WHY THERE IS A 404.html:
+# - This app uses BrowserRouter with clean URLs (/team, /events, ...), but it
+#   is still ONE file (dist/index.html). GitHub Pages is a static file server:
+#   a direct visit or refresh on /team makes Pages look for a team.html file,
+#   find nothing, and answer 404.
+# - The provides a fix: Pages serves 404.html
+#   for every unknown path, which boots the React app, and React Router then
+#   reads the URL and renders the right page client-side. No index.html edits
+#   needed for this to work.
+
+name: Deploy to GitHub Pages
+
+on:
+  # Runs on pushes to main. If your working branch is named differently
+  # (e.g. "redesign" or "inital-push-test"), add it to this list or change it.
+  push:
+    branches: ["main"]
+  # Allows manual re-runs from the Actions tab without pushing.
+  workflow_dispatch:
+
+# Least-privilege tokens for the official Pages actions (required as written).
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Only one Pages deployment at a time; a newer push cancels a queued older one
+# (but never cancels the run that is currently deploying).
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Check out the repo so the runner can build it.
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Install Node. Version 22 (LTS) matches the engines this project
+      #    builds cleanly on; `cache: npm` speeds up repeat runs.
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      # 3. `npm ci` (not `npm i`): deterministic install from package-lock.json,
+      #    so CI builds exactly what you built locally.
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Compile the React app into static files in dist/. This also copies
+      #    everything from public/ (CNAME, favicon.jpg, robots.txt) to dist/.
+      - name: Build
+        run: npm run build
+
+      # 5. SPA fallback (see header comment): let client-side routes survive
+      #    refreshes and direct links on GitHub Pages.
+      - name: Add SPA fallback for client-side routes
+        run: cp dist/index.html dist/404.html
+
+      # 6. Hand dist/ to GitHub Pages as a deployment artifact.
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    # Must wait for the build above; only deploys if the build succeeded.
+    needs: build
+    runs-on: ubuntu-latest
+    # Exposes the live URL in the run summary and on the environment page.
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
