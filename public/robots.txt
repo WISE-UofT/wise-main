@@ -1,0 +1,3 @@
+# Search-engine rules for the WISE redesign (single-page React app).
+User-agent: *
+Allow: /
