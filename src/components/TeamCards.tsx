@@ -122,9 +122,9 @@ function PhotoBox({member, color, isVP, round}: {
 
 // team member card
 
-export function MemberCard({member, color, light, border, isVP, onClick}: {
+export function MemberCard({member, color, light, border, isVP, nameColor, onClick}: {
   member: TeamRole; color: string; light: string; border: string;
-  isVP?: boolean; onClick: () => void;
+  isVP?: boolean; nameColor?: string; onClick: () => void;
 }) {
   return (
     <motion.button
@@ -148,7 +148,7 @@ export function MemberCard({member, color, light, border, isVP, onClick}: {
       {/* Name + role */}
       <div className="w-full space-y-0.5">
         <p className="text-xs font-semibold leading-tight"
-          style={{color: member.name ? "#1a0a3d" : "rgba(26,10,61,0.35)", fontStyle: member.name ? "normal" : "italic"}}>
+          style={{color: member.name ? (nameColor ?? "#1a0a3d") : "rgba(26,10,61,0.35)", fontStyle: member.name ? "normal" : "italic"}}>
           {member.name || "Name TBD"}
         </p>
         <p className="text-[10px] leading-snug" style={{color: isVP ? color : "rgba(26,10,61,0.52)"}}>

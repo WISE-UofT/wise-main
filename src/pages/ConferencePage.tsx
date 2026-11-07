@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {motion, AnimatePresence} from "motion/react";
-import {ChevronLeft, ChevronRight} from "lucide-react";
+import {ArrowRight, ChevronLeft, ChevronRight} from "lucide-react";
 import {CONFERENCE_GALLERY} from "@/data/content";
 
 export default function ConferencePage() {
@@ -52,12 +52,16 @@ export default function ConferencePage() {
           <p style={{color: "rgba(26,10,61,0.65)", lineHeight: 1.8}}>
             Whether you&apos;re a first-year student or a seasoned professional, the WISE Conference offers something for everyone. Registration details will be announced closer to the date — stay tuned!
           </p>
-          <span
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white cursor-default"
-            style={{background: "linear-gradient(135deg, #5b21b6, #7c3aed)", boxShadow: "0 8px 28px rgba(91,33,182,0.35)", opacity: 0.65}}
+          <a
+            href="https://conference.wise.skule.ca/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white transition-transform hover:scale-[1.03]"
+            style={{background: "linear-gradient(135deg, #5b21b6, #7c3aed)", boxShadow: "0 8px 28px rgba(91,33,182,0.35)"}}
           >
-            Registration coming soon
-          </span>
+            Go To Conference Website
+            <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+          </a>
         </motion.div>
 
         {/* Last Year section */}
