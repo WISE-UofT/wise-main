@@ -9,7 +9,7 @@ import conf4 from "@/imports/CONF_4.JPG";
 import networkingPhoto from "@/imports/IMG_3618.JPG";
 import socialPhoto from "@/imports/IMG_0025.jpg";
 import mentorshipPhoto from "@/imports/DSC04644.JPG";
-import nvidiaPhoto from "@/imports/IMG_7070.png";
+import nvidiaPhoto from "@/imports/IMG_7070.jpg";
 import pageBg from "@/imports/page-background.png";
 import heroBg from "@/imports/background-gradient.jpeg";
 import bunnyJpeg from "@/imports/background.jpeg";
@@ -17,6 +17,11 @@ import bunnySticker from "@/imports/Untitled_design.png";
 import copresidentsPhoto from "@/imports/Copy_of_IMG_3747_edited.JPG";
 import hsMentor from "@/imports/GEG.jpeg";
 import group from "@/imports/GROUP.png"
+import outreachPhoto from "@/imports/outreach_blood_drive.jpg";
+import autodeskEventPhoto from "@/imports/autodeskevent.jpeg";
+import industryMentorPhoto from "@/imports/industrymentor.JPG";
+import teamScrollPhoto from "@/imports/teamscroll.JPG";
+import iwdgPhoto from "@/imports/IWDG.JPG";
 
 export {
   logoGradient,
@@ -38,4 +43,9 @@ export {
   copresidentsPhoto,
   hsMentor,
   group, 
+  outreachPhoto,
+  autodeskEventPhoto,
+  industryMentorPhoto,
+  teamScrollPhoto,
+  iwdgPhoto,
 };
