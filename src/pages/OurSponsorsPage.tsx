@@ -1,11 +1,9 @@
 import {motion} from "motion/react";
 import {ArrowRight, Mail} from "lucide-react";
 import {SPONSORS, SPONSOR_STATS} from "@/data/content";
+import {sponsorLogo} from "@/data/sponsorLogos";
 
 export default function OurSponsorsPage() {
-  const tierColors = {Gold: "#d97706", Silver: "#64748b", Bronze: "#92400e"} as const;
-  const tierBgs = {Gold: "rgba(217,119,6,0.12)", Silver: "rgba(100,116,139,0.12)", Bronze: "rgba(146,64,14,0.12)"} as const;
-
   return (
     <motion.div initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.3}} className="min-h-screen pt-28 pb-24">
       <div className="max-w-6xl mx-auto px-6 lg:px-8 space-y-24">
@@ -29,31 +27,31 @@ export default function OurSponsorsPage() {
         <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{delay: 0.25}}>
           <div className="relative w-full rounded-3xl overflow-hidden" style={{height: "440px", background: "radial-gradient(ellipse at 50% 50%, rgba(91,33,182,0.18), rgba(10,2,30,0.5))", border: "1px solid rgba(255,255,255,0.14)", backdropFilter: "blur(8px)"}}>
             <div className="absolute inset-0 pointer-events-none" style={{backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px)", backgroundSize: "36px 36px"}} />
-            {SPONSORS.map((s, i) => (
-              <motion.div key={s.name} className="absolute" style={{left: s.x, top: s.y}}
-                animate={{y: [0, -14, 2, -8, 0]}} transition={{duration: 5 + i * 0.55, repeat: Infinity, ease: "easeInOut", delay: s.delay}}
-              >
-                <motion.div whileHover={{scale: 1.12, rotate: 2}} transition={{type: "spring", stiffness: 300}}
-                  className="rounded-2xl px-4 py-3 flex flex-col items-center gap-0.5 cursor-default select-none"
-                  style={{background: s.bg, border: "1.5px solid rgba(255,255,255,0.4)", boxShadow: "0 8px 28px rgba(0,0,0,0.10)", minWidth: s.tier === "Gold" ? 96 : 80}}
+            {SPONSORS.map((s, i) => {
+              const logo = sponsorLogo(s.logo);
+              return (
+                <motion.div key={s.name} className="absolute" style={{left: s.x, top: s.y}}
+                  animate={{y: [0, -14, 2, -8, 0]}} transition={{duration: 5 + i * 0.55, repeat: Infinity, ease: "easeInOut", delay: s.delay}}
                 >
-                  <span className="text-xl font-black leading-none" style={{color: s.color, fontFamily: "'Bricolage Grotesque', sans-serif"}}>{s.letter}</span>
-                  <span className="text-[9px] font-semibold uppercase tracking-wider mt-0.5" style={{color: `${s.color}99`}}>{s.name}</span>
-                  <span className="text-[8px] font-bold uppercase tracking-widest mt-1 px-1.5 py-0.5 rounded-full" style={{background: tierBgs[s.tier], color: tierColors[s.tier]}}>{s.tier}</span>
+                  <motion.div whileHover={{scale: 1.12, rotate: 2}} transition={{type: "spring", stiffness: 300}}
+                    className="rounded-2xl px-3 py-2.5 flex flex-col items-center gap-1.5 cursor-default select-none"
+                    style={{background: "rgba(255,255,255,0.94)", border: "1.5px solid rgba(255,255,255,0.4)", boxShadow: "0 8px 28px rgba(0,0,0,0.10)", minWidth: 120}}
+                  >
+                    <div className="flex h-11 w-28 items-center justify-center rounded-xl bg-white px-2">
+                      {logo ? (
+                        <img src={logo} alt={`${s.name} logo`} loading="lazy" decoding="async" className="max-h-9 max-w-full object-contain" />
+                      ) : (
+                        <span className="text-xl font-black leading-none" style={{color: s.color, fontFamily: "'Bricolage Grotesque', sans-serif"}}>{s.letter}</span>
+                      )}
+                    </div>
+                    <span className="text-[9px] font-semibold uppercase tracking-wider" style={{color: "rgba(26,10,61,0.68)"}}>{s.name}</span>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            ))}
+              );
+            })}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <motion.div className="rounded-full" style={{width: 120, height: 120, background: "radial-gradient(circle, rgba(139,92,246,0.12), transparent)"}} animate={{scale: [1, 1.6, 1], opacity: [0.5, 0, 0.5]}} transition={{duration: 4, repeat: Infinity}} />
             </div>
-          </div>
-          <div className="flex justify-center gap-6 mt-5">
-            {(["Gold", "Silver", "Bronze"] as const).map((tier) => (
-              <div key={tier} className="flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full" style={{background: tierColors[tier]}} />
-                <span className="text-xs font-semibold" style={{color: "rgba(26,10,61,0.55)"}}>{tier} Sponsor</span>
-              </div>
-            ))}
           </div>
         </motion.div>
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">

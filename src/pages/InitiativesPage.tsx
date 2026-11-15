@@ -1,6 +1,6 @@
 import {motion} from "motion/react";
 import {ArrowRight} from "lucide-react";
-import {INITIATIVE_DETAILS} from "@/data/content";
+import {INITIATIVE_DETAILS, MEMBER_FORM_URL} from "@/data/content";
 
 export default function InitiativesPage() {
   return (
@@ -74,7 +74,7 @@ export default function InitiativesPage() {
             Interested in getting involved?
           </h3>
           <p style={{color: "rgba(76,29,149,0.65)"}}>Join WISE and become part of a community that lifts you up.</p>
-          <motion.a href="#" whileHover={{scale: 1.04, y: -2}} whileTap={{scale: 0.97}}
+          <motion.a href={MEMBER_FORM_URL} target="_blank" rel="noopener noreferrer" whileHover={{scale: 1.04, y: -2}} whileTap={{scale: 0.97}}
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold text-white"
             style={{background: "linear-gradient(135deg, #5b21b6, #7c3aed)", boxShadow: "0 8px 28px rgba(91,33,182,0.3)"}}
           >

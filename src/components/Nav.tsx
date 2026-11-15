@@ -119,14 +119,13 @@ export default function Nav({
           </button>
         </nav>
 
-        <motion.button
-          onClick={onOpportunities}
-          whileHover={{scale: 1.04}} whileTap={{scale: 0.97}}
-          className="hidden lg:inline-flex px-4 py-2 text-sm font-semibold rounded-lg text-white"
+        <Link
+          to="/initiatives"
+          className="hidden lg:inline-flex px-4 py-2 text-sm font-semibold rounded-lg text-white transition-transform hover:scale-105 active:scale-95"
           style={{background: "#5b21b6"}}
         >
           Join WISE
-        </motion.button>
+        </Link>
 
         <button className="lg:hidden p-2" style={{color: "#281b71"}} onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <X size={20} /> : <Menu size={20} />}
@@ -148,12 +147,13 @@ export default function Nav({
               <Link key={path} to={path} onClick={() => setMenuOpen(false)} className="text-left py-2.5 text-sm font-medium" style={{color: "rgba(255,255,255,0.78)"}}>{label}</Link>
             ))}
             <button onClick={onOpportunities} className="text-left py-2.5 text-sm font-medium" style={{color: "rgba(255,255,255,0.78)"}}>Opportunities</button>
-            <button
-              onClick={onOpportunities}
+            <Link
+              to="/initiatives"
+              onClick={() => setMenuOpen(false)}
               className="mt-3 px-4 py-2.5 text-sm font-semibold rounded-lg text-center text-white" style={{background: "#5b21b6"}}
             >
               Join WISE
-            </button>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

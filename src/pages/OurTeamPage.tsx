@@ -5,12 +5,18 @@ import {TEAM_STRUCTURE, type ModalState, type TeamRole} from "@/data/content";
 import {PresidentsGroupCard, MemberCard, TeamModal} from "@/components/TeamCards";
 
 
+// Light text for sections that sit on the dark lower half of the page background.
+const LOWER_TEXT = "#e9d5ff";
+
 export default function OurTeamPage() {
   const [modal, setModal] = useState<ModalState>(null);
 
   const openModal = (member: TeamRole, subteam: string, color: string, isVP?: boolean) => {
     setModal({member, subteam, color, isVP});
- };
+  };
+
+  // "Professional Development and below" use light text instead of dark purple.
+  const pdIndex = TEAM_STRUCTURE.findIndex((t) => t.name === "Professional Development");
 
   return (
     <>
@@ -39,11 +45,13 @@ export default function OurTeamPage() {
               <span className="text-sm" style={{color: "rgba(26,10,61,0.42)"}}>Click any card to learn more.</span>
             </motion.p>
           </div>
-          {TEAM_STRUCTURE.map((team) => (
+          {TEAM_STRUCTURE.map((team, ti) => {
+            const isLower = ti >= pdIndex;
+            return (
             <motion.div key={team.name} initial={{opacity: 0, y: 20}} whileInView={{opacity: 1, y: 0}} viewport={{once: true}} transition={{duration: 0.5}} className="space-y-5">
               <div className="flex items-center gap-3">
                 <div className="w-3 h-3 rounded-full flex-shrink-0 shadow-lg" style={{background: team.color, boxShadow: `0 0 12px ${team.color}88`}} />
-                <h2 className="text-sm font-bold uppercase tracking-[0.18em]" style={{color: "#1a0a3d"}}>
+                <h2 className="text-sm font-bold uppercase tracking-[0.18em]" style={{color: isLower ? LOWER_TEXT : "#1a0a3d"}}>
                   {team.name}
                 </h2>
                 <div className="flex-1 h-px" style={{background: `linear-gradient(to right, ${team.color}44, transparent)`}} />
@@ -57,7 +65,7 @@ export default function OurTeamPage() {
                   {team.vps && team.vps.length > 0 && (
                     <div className="grid grid-cols-2 gap-3 max-w-[420px]">
                       {team.vps.map((vp, vi) => (
-                        <MemberCard key={vi} member={vp} color={team.color} light={team.light} border={team.border} isVP onClick={() => openModal(vp, team.name, team.color, true)} />
+                        <MemberCard key={vi} member={vp} color={team.color} light={team.light} border={team.border} isVP nameColor={isLower ? LOWER_TEXT : undefined} onClick={() => openModal(vp, team.name, team.color, true)} />
                       ))}
                     </div>
                   )}
@@ -69,7 +77,8 @@ export default function OurTeamPage() {
                 </div>
               )}
             </motion.div>
-          ))}
+            );
+          })}
         </div>
       </motion.div>
     </>

@@ -7,7 +7,7 @@ import {
   logoGradient,
   storiesLogo,
   socialPhoto,
-  nvidiaPhoto,
+  autodeskEventPhoto,
   mentorshipPhoto,
   networkingPhoto,
   conf0,
@@ -110,7 +110,7 @@ export default function HomePage() {
             </p>
             <p style={{ color: "rgba(76,29,149,0.65)", lineHeight: 1.75 }}>
               From <span style={{ color: "#5b21b6" }} className="font-medium">Spilling the Tea on Research</span> to{" "}
-              <span style={{ color: "#5b21b6" }} className="font-medium">Plastisol Bracelet Workshops</span>, every initiative exists because we are passionate about our commitment to one another.
+              <span style={{ color: "#5b21b6" }} className="font-medium">National Conference and WISE and Cheese networking</span>, every initiative exists because we are passionate about our commitment to one another.
             </p>
             <div className="flex flex-wrap gap-2 pt-1">
               {["Inclusive", "Empowering", "Community-driven", "Impact-focused"].map((tag, i) => (
@@ -119,8 +119,8 @@ export default function HomePage() {
                 </motion.span>
               ))}
             </div>
-            <a href="#opportunities" className="inline-flex items-center gap-2 text-sm font-semibold group" style={{ color: "#7c3aed" }}>
-              Become a member <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
+            <a href="#opportunities" className="inline-flex items-center gap-3 text-xl font-semibold group" style={{ color: "#7c3aed" }}>
+              Become a member <ArrowRight size={22} className="group-hover:translate-x-0.5 transition-transform" />
             </a>
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }} className="relative group">
@@ -246,7 +246,7 @@ export default function HomePage() {
                   <img src={socialPhoto} alt="WISE members at social event" loading="lazy" className="w-full h-full object-cover" />
                 </div>
                 <div className="rounded-xl overflow-hidden" style={{ aspectRatio: "4/3" }}>
-                  <img src={nvidiaPhoto} alt="WISE members at NVIDIA visit" loading="lazy" className="w-full h-full object-cover" style={{ transform: "rotate(90deg) scale(1.45)", transformOrigin: "center" }} />
+                  <img src={autodeskEventPhoto} alt="WISE members at Autodesk event" loading="lazy" className="w-full h-full object-cover object-center" />
                 </div>
               </div>
               <div className="pt-2">
@@ -256,7 +256,9 @@ export default function HomePage() {
               </div>
             </motion.div>
             <AnimatePresence mode="wait">
-              <motion.div key={activeStory} initial={{ opacity: 0, x: 22 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -22 }} transition={{ duration: 0.35 }} className="rounded-2xl p-8 lg:p-10 space-y-6" style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.14)", backdropFilter: "blur(24px)" }}>
+              <motion.a key={activeStory} href={STORIES[activeStory].link || undefined} target={STORIES[activeStory].link ? "_blank" : undefined} rel={STORIES[activeStory].link ? "noopener noreferrer" : undefined}
+                initial={{ opacity: 0, x: 22 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -22 }} transition={{ duration: 0.35 }} whileHover={{ y: -3 }}
+                className="group block rounded-2xl p-8 lg:p-10 space-y-6" style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.14)", backdropFilter: "blur(24px)", cursor: STORIES[activeStory].link ? "pointer" : "default" }}>
                 <svg width="32" height="24" viewBox="0 0 32 24" fill="none" style={{ opacity: 0.2 }}>
                   <path d="M0 24V14.4C0 10.56 0.96 7.28 2.88 4.56C4.88 1.76 7.76 0 11.52 0L13.44 2.88C11.12 3.36 9.2 4.48 7.68 6.24C6.24 7.92 5.52 9.84 5.52 12H9.6V24H0ZM18.56 24V14.4C18.56 10.56 19.52 7.28 21.44 4.56C23.44 1.76 26.32 0 30.08 0L32 2.88C29.68 3.36 27.76 4.48 26.24 6.24C24.8 7.92 24.08 9.84 24.08 12H28.16V24H18.56Z" fill="white" />
                 </svg>
@@ -268,7 +270,12 @@ export default function HomePage() {
                     <p className="text-xs mt-0.5" style={{ color: "rgba(255,255,255,0.45)" }}>{STORIES[activeStory].role}</p>
                   </div>
                 </div>
-              </motion.div>
+                {STORIES[activeStory].link && (
+                  <div className="flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest" style={{ color: "rgba(255,255,255,0.45)" }}>
+                    Read the full story <ArrowUpRight size={13} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
+                )}
+              </motion.a>
             </AnimatePresence>
           </div>
         </div>
@@ -292,7 +299,7 @@ export default function HomePage() {
                 <h3 className="text-xl font-bold text-white" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>{card.title}</h3>
                 <p className="text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>{card.desc}</p>
                 {card.cta && (
-                  <a href="#" className="inline-flex items-center gap-1.5 text-sm font-semibold group" style={{ color: "rgba(255,255,255,0.65)" }}>
+                  <a href={card.href ?? "#"} target={card.href ? "_blank" : undefined} rel={card.href ? "noopener noreferrer" : undefined} className="inline-flex items-center gap-1.5 text-sm font-semibold group" style={{ color: "rgba(255,255,255,0.65)" }}>
                     {card.cta} <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
                   </a>
                 )}

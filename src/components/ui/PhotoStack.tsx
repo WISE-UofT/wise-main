@@ -1,14 +1,14 @@
 import {useState} from "react";
 import {motion} from "motion/react";
-import {heroGroupPhoto, networkingPhoto, socialPhoto} from "@/data/assets";
+import {heroGroupPhoto, teamScrollPhoto, iwdgPhoto} from "@/data/assets";
 
 // ─── Photo Stack ─────────────────────────────────────────────────────────────
 
 export default function PhotoStack() {
   const photos = [
     {src: heroGroupPhoto, pos: "center 15%"},
-    {src: networkingPhoto, pos: "center center"},
-    {src: socialPhoto, pos: "center center"},
+    {src: teamScrollPhoto, pos: "55% center"},
+    {src: iwdgPhoto, pos: "center center"},
   ];
   const [activeIdx, setActiveIdx] = useState(0);
   const [hovered, setHovered] = useState(false);
@@ -63,7 +63,7 @@ export default function PhotoStack() {
             </div>
             <div>
               <p className="text-white text-xs font-semibold leading-tight">90+ members</p>
-              <p className="text-[10px]" style={{color: "rgba(255,255,255,0.6)"}}>across UofT Engineering</p>
+              <p className="text-[10px]" style={{color: "rgba(255,255,255,0.6)"}}>across all of UofT</p>
             </div>
           </div>
         </div>
