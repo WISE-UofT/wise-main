@@ -22,6 +22,7 @@ import autodeskEventPhoto from "@/imports/autodeskevent.jpeg";
 import industryMentorPhoto from "@/imports/industrymentor.JPG";
 import teamScrollPhoto from "@/imports/teamscroll.JPG";
 import iwdgPhoto from "@/imports/IWDG.JPG";
+import growWWisePhoto from "@/imports/grow_w_wise.jpg";
 
 export {
   logoGradient,
@@ -48,4 +49,5 @@ export {
   industryMentorPhoto,
   teamScrollPhoto,
   iwdgPhoto,
+  growWWisePhoto,
 };

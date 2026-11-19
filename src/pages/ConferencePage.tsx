@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {motion, AnimatePresence} from "motion/react";
-import {ArrowRight, ChevronLeft, ChevronRight} from "lucide-react";
+import {ArrowRight, ChevronLeft, ChevronRight, Ticket} from "lucide-react";
 import {CONFERENCE_GALLERY} from "@/data/content";
 
 export default function ConferencePage() {
@@ -29,7 +29,7 @@ export default function ConferencePage() {
 
         {/* Info cards */}
         <div className="grid sm:grid-cols-2 gap-4">
-          {[{label: "Date", value: "TBD"}, {label: "Location", value: "The Westin Harbour Castle, Toronto"}].map(({label, value}, i) => (
+          {[{label: "Date", value: "January 23–24, 2027"}, {label: "Location", value: "The Westin Harbour Castle, Toronto"}].map(({label, value}, i) => (
             <motion.div key={label} initial={{opacity: 0, y: 16}} animate={{opacity: 1, y: 0}} transition={{delay: 0.2 + i * 0.08}}
               className="rounded-2xl px-6 py-5 space-y-1"
               style={{background: "rgba(255,255,255,0.55)", border: "1px solid rgba(91,33,182,0.15)", backdropFilter: "blur(12px)"}}
@@ -50,18 +50,30 @@ export default function ConferencePage() {
             The WISE Annual Conference is our signature event, bringing together students, industry leaders, and researchers to celebrate the achievements of women in STEM. Each year we curate inspiring keynotes, interactive workshops, and networking sessions designed to empower the next generation of engineers and scientists.
           </p>
           <p style={{color: "rgba(26,10,61,0.65)", lineHeight: 1.8}}>
-            Whether you&apos;re a first-year student or a seasoned professional, the WISE Conference offers something for everyone. Registration details will be announced closer to the date — stay tuned!
+            Whether you&apos;re a first-year student or a seasoned professional, the WISE Conference offers something for everyone. Tickets are on sale now — secure your spot early!
           </p>
-          <a
-            href="https://conference.wise.skule.ca/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white transition-transform hover:scale-[1.03]"
-            style={{background: "linear-gradient(135deg, #5b21b6, #7c3aed)", boxShadow: "0 8px 28px rgba(91,33,182,0.35)"}}
-          >
-            Go To Conference Website
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
-          </a>
+          <div className="flex flex-wrap items-center gap-3 pt-1">
+            <a
+              href="https://www.zeffy.com/en-CA/ticketing/wise-national-conference--2027"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white transition-transform hover:scale-[1.03]"
+              style={{background: "linear-gradient(135deg, #5b21b6, #7c3aed)", boxShadow: "0 8px 28px rgba(91,33,182,0.35)"}}
+            >
+              <Ticket size={16} className="transition-transform group-hover:-translate-y-0.5" />
+              Get Your Ticket
+            </a>
+            <a
+              href="https://conference.wise.skule.ca/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white transition-transform hover:scale-[1.03]"
+              style={{background: "linear-gradient(135deg, #5b21b6, #7c3aed)", boxShadow: "0 8px 28px rgba(91,33,182,0.35)"}}
+            >
+              Go To Conference Website
+              <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+            </a>
+          </div>
         </motion.div>
 
         {/* Last Year section */}
