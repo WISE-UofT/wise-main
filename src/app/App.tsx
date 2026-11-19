@@ -19,17 +19,18 @@ function ScrollManager() {
 
   useEffect(() => {
     const state = location.state as {scrollTo?: string} | null;
-    if (location.pathname === "/" && state?.scrollTo) {
-      // Cross-page "Opportunities" request: wait for HomePage to mount, then scroll
+    const target = state?.scrollTo ?? (location.hash ? location.hash.slice(1) : null);
+    if (location.pathname === "/" && target) {
+      // Cross-page or hash "Opportunities" request: wait for HomePage to mount, then scroll
       const t = setTimeout(() => {
-        document.querySelector("#opportunities")?.scrollIntoView({behavior: "smooth"});
+        document.getElementById(target)?.scrollIntoView({behavior: "smooth"});
         // Clear router state so back/forward doesn't re-trigger the scroll
-        window.history.replaceState({}, "");
-     }, 350);
+        if (state?.scrollTo) window.history.replaceState({}, "");
+     }, 150);
       return () => clearTimeout(t);
    }
     window.scrollTo({top: 0, behavior: "instant" as ScrollBehavior});
- }, [location.pathname, location.state]);
+ }, [location.pathname, location.state, location.hash]);
 
   return null;
 }

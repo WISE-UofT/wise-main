@@ -149,6 +149,7 @@ export const TEAM_STRUCTURE: TeamSection[] = [
       {role: "Professional Mentorship Director", name: "Ana Luiza Queres Larieu", quote: "A Fun Fact About Me: I’ve got 14 stitches in my nose from a hide and seek game!", photo:"ana_luiza_queres_larieu.jpg", linkedin:"http://www.linkedin.com/in/ana-luiza-larieu-95a6b6231", program: "3rd year, Biomedical Systems Engineering, Robotics and Mechatronics Minor"},
       {role: "Professional Mentorship Director", name: "Yashvi Shah", quote: "At the Top of My Bucket List: To see the floating lanterns in Thailand", photo:"yashvi_shah.jpg", linkedin:"https://www.linkedin.com/in/yashvishah15/", program: "2nd year, Computer Engineering"},
       {role: "Professional Mentorship Director", name: "Kimaya Mahajan", quote: "A Fun Fact About Me: I've got two blackbelts!", photo:"kimaya_mahajan.jpg", linkedin:"http://www.linkedin.com/in/kimaya-mahajan-9462b5313", program: "2nd year, Computer Engineering"},
+      {role: "First Year Representative - Professional Development", name: "Narumugai Ramasubramanian", photo:"narumugai_ramasubramanian_pdint.jpg"},
     ],
  },
   {
@@ -197,7 +198,8 @@ export const TEAM_STRUCTURE: TeamSection[] = [
       {role: "HS Mentorship Director", name: "Riana Khasanova", quote: "A Fun Fact About Me: I’m doing an Ironman 70.3 in May", photo:"riana_khasanova.jpg", linkedin:"https://www.linkedin.com/feed/", program: "2nd year, EngSci"},
       {role: "HS Events Director", name: "Stephanie Florescu", quote: "My Favourite Hobby: Baking!!!", photo:"stephanie_florescu.jpg", linkedin:"http://www.linkedin.com/in/stephanie-f-b90261201", program: "2nd year, Computer Engineering"},
       {role: "Special Events Director", name: "Prerana Manoj", quote: "My Favourite Hobby: playing bullet chess", photo:"prerana_manoj.png", linkedin:"http://ca.linkedin.com/in/prerana-manoj", program: "2nd year Industrial Engineering (specializing in ai/ml)"},
-      {role: "First Year Representative - HS Events", name: "Helena Gu", quote: "A Life Goal: A Life Goals try every boba shop in the world <3", photo:"", linkedin:"https://www.linkedin.com/in/hgyueyue/", program: "1st year, Electrical Engineering"},
+      {role: "First Year Representative - HS Events", name: "Helena Gu", quote: "A Life Goal: A Life Goals try every boba shop in the world <3", photo:"helena_gu.jpg", linkedin:"https://www.linkedin.com/in/hgyueyue/", program: "1st year, Electrical Engineering"},
+      {role: "First Year Representative - Outreach", name: "Angelina Fu", photo:"angelina_fu_intou.jpg"},
     ],
  },
   {
@@ -223,7 +225,8 @@ export const TEAM_STRUCTURE: TeamSection[] = [
       {role: "Conference Marketing Director", name: "Sabaa Rashid", quote: "My Favourite Hobby: video calling with my cats back home!", photo:"sabaa_rashid.jpg", linkedin:"https://www.linkedin.com/in/sabaarashid/", program: "2nd year, Engineering Science, Intended Robotics Specialisation"},
       {role: "Conference Marketing Director", name: "Sylvia Xu", quote: "At the Top of My Bucket List: Going bungee jumping!", photo:"sylvia_xu.jpg", linkedin:"http://www.linkedin.com/in/sylviax28/", program: "3rd year, Computer Science Major"},
       {role: "Conference Webmaster", name: "Hiya Thakkar", quote: "My Favourite Hobby: cafe hopping", photo:"hiya_thakkar.jpg", linkedin:"https://www.linkedin.com/in/hiya-thakkar-b64504301/", program: "Co-op, Computer Science, Statistics"},
-      {role: "First Year Representative - Conference Workshops", name: "Apple Yutong Wang", quote: "A Life Goal: To travel to most countries, try their food, and meet all types of people", photo:"", linkedin:"https://www.linkedin.com/in/yutong-wang-57b986319/", program: "1st year, Engineering science"},
+      {role: "First Year Representative - Conference Workshops", name: "Apple Yutong Wang", quote: "A Life Goal: To travel to most countries, try their food, and meet all types of people", photo:"apple_yutong_wang.jpg", linkedin:"https://www.linkedin.com/in/yutong-wang-57b986319/", program: "1st year, Engineering science"},
+      {role: "First Year Representative - Conference", name: "Elina Mahdi", photo:"elina_mahdi_conf.jpg"},
   ],
  },
 ];

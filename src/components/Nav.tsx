@@ -120,7 +120,7 @@ export default function Nav({
         </nav>
 
         <Link
-          to="/initiatives"
+          to="/#opportunities"
           className="hidden lg:inline-flex px-4 py-2 text-sm font-semibold rounded-lg text-white transition-transform hover:scale-105 active:scale-95"
           style={{background: "#5b21b6"}}
         >
@@ -148,7 +148,7 @@ export default function Nav({
             ))}
             <button onClick={onOpportunities} className="text-left py-2.5 text-sm font-medium" style={{color: "rgba(255,255,255,0.78)"}}>Opportunities</button>
             <Link
-              to="/initiatives"
+              to="/#opportunities"
               onClick={() => setMenuOpen(false)}
               className="mt-3 px-4 py-2.5 text-sm font-semibold rounded-lg text-center text-white" style={{background: "#5b21b6"}}
             >

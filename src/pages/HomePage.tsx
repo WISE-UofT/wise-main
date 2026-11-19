@@ -11,6 +11,7 @@ import {
   mentorshipPhoto,
   networkingPhoto,
   conf0,
+  growWWisePhoto,
 } from "@/data/assets";
 import Marquee from "@/components/ui/Marquee";
 import MultiOrbCluster from "@/components/ui/MultiOrbCluster";
@@ -87,10 +88,10 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <MultiOrbCluster />
             <motion.div initial={{ opacity: 0, x: 24 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="grid grid-cols-2 gap-10 lg:gap-12">
-              <StatCounter value={90} suffix="+" label="Active Members" />
+              <StatCounter value={96} label="Executive Members" />
+              <StatCounter value={200} suffix="+" label="General Members" />
               <StatCounter value={20} suffix="+" label="Events / Year" />
               <StatCounter value={20} suffix="+" label="Years of Impact" />
-              <StatCounter value={4} label="Core Programs" />
             </motion.div>
           </div>
         </div>
@@ -289,7 +290,7 @@ export default function HomePage() {
             <h2 className="text-4xl lg:text-5xl font-bold text-white tracking-tight" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>Grow with WISE</h2>
             <p className="text-base max-w-xl" style={{ color: "rgba(255,255,255,0.55)", lineHeight: 1.75 }}>Membership, executive roles, mentorship, and industry visits — WISE is your launchpad in STEM.</p>
           </motion.div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 items-end">
             {OPPORTUNITY_CARDS.map((card, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} whileHover={{ y: -4 }} className="rounded-2xl p-7 space-y-4 cursor-default"
                 style={{ background: "rgba(255,255,255,0.07)", border: "1px solid rgba(255,255,255,0.12)", backdropFilter: "blur(16px)", transition: "background 0.25s, box-shadow 0.25s" }}
@@ -305,6 +306,11 @@ export default function HomePage() {
                 )}
               </motion.div>
             ))}
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
+              className="relative lg:self-stretch"
+            >
+              <img src={growWWisePhoto} alt="WISE members at a community gathering" loading="lazy" className="block w-full h-auto rounded-2xl lg:absolute lg:bottom-0 lg:left-0" style={{ border: "1px solid rgba(255,255,255,0.12)", boxShadow: "0 16px 48px rgba(91,33,182,0.18)" }} />
+            </motion.div>
           </div>
         </div>
       </section>
