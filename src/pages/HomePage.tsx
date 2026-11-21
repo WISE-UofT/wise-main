@@ -204,15 +204,16 @@ export default function HomePage() {
                 <p className="leading-relaxed max-w-sm" style={{ color: "rgba(255,255,255,0.65)" }}>Our signature event bringing students, industry leaders, and researchers together to celebrate women in STEM.</p>
               </div>
               <div className="flex flex-col sm:flex-row lg:flex-col gap-3 lg:items-end">
-                {[{ label: "Date", value: "Coming Soon!" }, { label: "Location", value: "Westin Harbour Castle, Toronto" }].map(({ label, value }) => (
+                {[{ label: "Date", value: "January 23–24, 2027" }, { label: "Location", value: "Westin Harbour Castle, Toronto" }].map(({ label, value }) => (
                   <div key={label} className="rounded-xl px-6 py-4 space-y-1 flex-1 lg:flex-none" style={{ background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.14)" }}>
                     <p className="text-xs font-medium" style={{ color: "rgba(255,255,255,0.45)" }}>{label}</p>
                     <p className="text-white font-semibold">{value}</p>
                   </div>
                 ))}
-                <motion.button onClick={() => navigate("/conference")} whileHover={{ scale: 1.04, y: -1 }} whileTap={{ scale: 0.97 }} className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold group" style={{ background: "white", color: "#5b21b6" }}>
-                  Registeration Coming Soon
-                </motion.button>
+                <motion.a href="https://www.zeffy.com/en-CA/ticketing/wise-national-conference--2027" target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.04, y: -1 }} whileTap={{ scale: 0.97 }} className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold group" style={{ background: "white", color: "#5b21b6" }}>
+                  Register Now
+                  <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
+                </motion.a>
               </div>
             </div>
           </motion.div>
